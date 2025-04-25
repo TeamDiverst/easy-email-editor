@@ -27,16 +27,19 @@ jobs:
           PACKAGE_AUTH_TOKEN: ${{ secrets.PACKAGE_AUTH_TOKEN }}
         run: | 
           pnpm config set @teamdiverst:registry https://npm.pkg.github.com 
-            && pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
-            && pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
+          pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
+          pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
 
       - name: Install dependencies
         run: |
-          cd packages/easy-email-core && pnpm install
+          cd packages/easy-email-core
+          pnpm install
 
       - name: Build and Publish
         run: |
-          cd packages/easy-email-core && pnpm build && pnpm publish --no-git-checks --access=restricted --report-summary
+          cd packages/easy-email-core
+          pnpm build
+          pnpm publish --no-git-checks --access=restricted --report-summary
 
   publish-editor:
     needs: [publish-core]
@@ -61,16 +64,19 @@ jobs:
           PACKAGE_AUTH_TOKEN: ${{ secrets.PACKAGE_AUTH_TOKEN }}
         run: | 
            pnpm config set @teamdiverst:registry https://npm.pkg.github.com 
-              && pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
-              && pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
+           pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
+           pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
 
       - name: Install dependencies
         run: |
-          cd packages/easy-email-editor && pnpm install
+          cd packages/easy-email-editor
+          pnpm install
 
       - name: Build and Publish
         run: |
-          cd packages/easy-email-editor && pnpm build && pnpm publish --no-git-checks --access=restricted --report-summary
+          cd packages/easy-email-editor
+          pnpm build
+          pnpm publish --no-git-checks --access=restricted --report-summary
 
   publish-extensions:
     needs: [publish-core, publish-editor]
@@ -95,14 +101,17 @@ jobs:
           PACKAGE_AUTH_TOKEN: ${{ secrets.PACKAGE_AUTH_TOKEN }}
         run: |
           pnpm config set @teamdiverst:registry https://npm.pkg.github.com 
-              && pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
-              && pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
+          pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
+          pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
 
       - name: Install dependencies
         run: |
-          cd packages/easy-email-extensions && pnpm install
+          cd packages/easy-email-extensions
+          pnpm install
 
       - name: Build and Publish
         run: |
-          cd packages/easy-email-extensions && pnpm build && pnpm publish --no-git-checks --access=restricted --report-summary
+          cd packages/easy-email-extensions
+          pnpm build
+          pnpm publish --no-git-checks --access=restricted --report-summary
 
