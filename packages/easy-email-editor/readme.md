@@ -18,8 +18,8 @@ $ yarn add easy-email-editor
 
 ```js
 import React from 'react';
-import { BlockManager } from 'easy-email-core';
-import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
+import { BlockManager } from '@teamdiverst/easy-email-core';
+import { EmailEditor, EmailEditorProvider } from '@teamdiverst/easy-email-editor';
 import 'easy-email-editor/lib/style.css';
 
 const initialValues = {
