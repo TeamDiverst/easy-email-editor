@@ -25,18 +25,18 @@ import {
   EmailEditor,
   EmailEditorProvider,
   IEmailTemplate,
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 
 import { Stack } from '@demo/components/Stack';
 import { pushEvent } from '@demo/utils/pushEvent';
 import { UserStorage } from '@demo/utils/user-storage';
 
-import { AdvancedType, IBlockData, JsonToMjml } from 'easy-email-core';
-import { ExtensionProps, StandardLayout } from 'easy-email-extensions';
+import { AdvancedType, IBlockData, JsonToMjml } from '@teamdiverst/easy-email-core';
+import { ExtensionProps, StandardLayout } from '@teamdiverst/easy-email-extensions';
 import { AutoSaveAndRestoreEmail } from '@demo/components/AutoSaveAndRestoreEmail';
 
-import 'easy-email-editor/lib/style.css';
-import 'easy-email-extensions/lib/style.css';
+import '@teamdiverst/easy-email-editor/lib/style.css';
+import '@teamdiverst/easy-email-extensions/lib/style.css';
 import blueTheme from '@arco-themes/react-easy-email-theme/css/arco.css?inline';
 
 import { Uploader } from '@demo/utils/Uploader';
