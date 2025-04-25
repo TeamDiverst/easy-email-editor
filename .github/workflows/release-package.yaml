@@ -5,36 +5,7 @@ on:
     types: [created]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-          run_install: false
-
-      - name: Install dependencies core
-        run: |
-          cd packages/easy-email-core && pnpm install
-
-      - name: Run tests core
-        run: pnpm run test:core
-
-      - name: Install dependencies extensions
-        run: |
-          cd packages/easy-email-extensions && pnpm install
-
-      - name: Run tests extensions
-        run: pnpm run test:extensions
-
   publish-gpr:
-    needs: build
     runs-on: ubuntu-latest
     permissions:
       packages: write
