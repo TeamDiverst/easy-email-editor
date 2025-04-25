@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import mjml from 'mjml-browser';
-import { getPageIdx, IPage, JsonToMjml } from 'easy-email-core';
+import { getPageIdx, IPage, JsonToMjml } from '@teamdiverst/easy-email-core';
 import { cloneDeep, isEqual } from 'lodash';
 import { useEditorContext } from '@/hooks/useEditorContext';
 import { useEditorProps } from '@/hooks/useEditorProps';

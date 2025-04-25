@@ -4,7 +4,7 @@ import {
   useEditorContext,
   useEditorProps,
   useRefState,
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 import { get } from 'lodash';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';

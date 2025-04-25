@@ -1,5 +1,5 @@
 import React from 'react';
-import { getPluginElement, RICH_TEXT_BAR_ID, useEditorContext } from 'easy-email-editor';
+import { getPluginElement, RICH_TEXT_BAR_ID, useEditorContext } from '@teamdiverst/easy-email-editor';
 import { Tools } from './components/Tools';
 import styleText from './shadow-dom.scss?inline';
 import { createPortal } from 'react-dom';

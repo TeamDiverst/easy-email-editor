@@ -4,7 +4,7 @@ import { useBlock } from './useBlock';
 import { getIframeDocument } from '@/utils';
 import { useFocusIdx } from './useFocusIdx';
 import { useEditorContext } from './useEditorContext';
-import { getNodeIdxFromClassName } from 'easy-email-core';
+import { getNodeIdxFromClassName } from '@teamdiverst/easy-email-core';
 import { getBlockNodeByChildEle } from '@/utils/getBlockNodeByChildEle';
 import { getEditorRoot } from '@/utils/getEditorRoot';
 

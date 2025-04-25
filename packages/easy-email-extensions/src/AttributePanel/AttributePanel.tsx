@@ -4,7 +4,7 @@ import {
   useBlock,
   useEditorContext,
   useFocusIdx,
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 import { RichTextField } from '../components/Form/RichTextField';
 import { PresetColorsProvider } from './components/provider/PresetColorsProvider';
 import { BlockAttributeConfigurationManager } from './utils/BlockAttributeConfigurationManager';

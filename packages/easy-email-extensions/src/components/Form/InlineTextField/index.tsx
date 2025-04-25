@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {
   ContentEditableType,
   DATA_CONTENT_EDITABLE_TYPE,
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 import { useField, useForm } from 'react-final-form';
 import { getIframeDocument } from '@extensions/utils/getIframeDocument';
 

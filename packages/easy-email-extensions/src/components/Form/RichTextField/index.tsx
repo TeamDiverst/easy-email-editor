@@ -7,7 +7,7 @@ import {
   MergeTagBadge,
   RICH_TEXT_BAR_ID,
   useEditorProps,
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 import React, { useCallback, useEffect, useState } from 'react';
 import { InlineText, InlineTextProps } from '../InlineTextField';
 import { RichTextToolBar } from '../RichTextToolBar';

@@ -1,4 +1,4 @@
-import { getBlockNodeByIdx } from 'easy-email-editor';
+import { getBlockNodeByIdx } from '@teamdiverst/easy-email-editor';
 
 export function awaitForElement<T extends HTMLElement>(idx: string) {
 
