@@ -94,10 +94,10 @@ export function useHotKeys() {
         }, 0);
       }
     };
-    getEditorRoot().contentWindow?.addEventListener('keydown', onKeyDown);
+    getEditorRoot()?.contentWindow?.addEventListener('keydown', onKeyDown);
 
     return () => {
-      getEditorRoot().contentWindow?.removeEventListener('keydown', onKeyDown);
+      getEditorRoot()?.contentWindow?.removeEventListener('keydown', onKeyDown);
     };
   }, [focusIdx, removeBlock, setFocusIdx, values]);
 }
