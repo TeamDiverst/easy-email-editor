@@ -42,7 +42,7 @@
     "liquidjs": "^10.9.2",
     "lodash": "^4.17.21",
     "mjml-browser": "^4.14.1",
-    "next": "12.1.4",
+    "next": "14.2.26",
     "next-auth": "4.3.1",
     "next-prisma-plugin-webpack5": "0.0.0-dripip",
     "next-with-less": "^3.0.1",
