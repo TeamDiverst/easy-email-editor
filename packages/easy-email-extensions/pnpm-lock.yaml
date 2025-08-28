@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@arco-design/web-react':
         specifier: ^2.36.1
-        version: 2.66.1(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.66.1(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@teamdiverst/easy-email-core':
         specifier: ^5.0.0
-        version: '@TeamDiverst/easy-email-core@5.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)'
+        version: '@TeamDiverst/easy-email-core@5.0.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)'
       '@teamdiverst/easy-email-editor':
         specifier: ^5.0.0
-        version: '@TeamDiverst/easy-email-editor@5.0.0(@TeamDiverst/easy-email-core@5.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mjml-browser@4.15.3)(react-dom@18.3.1(react@18.3.1))(react-final-form@6.5.9(final-form@4.20.10)(react@18.3.1))(react@18.3.1)'
+        version: '@TeamDiverst/easy-email-editor@5.0.0(@TeamDiverst/easy-email-core@5.0.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(mjml-browser@4.15.3)(react-dom@19.1.1(react@19.1.1))(react-final-form@7.0.0(final-form@5.0.0)(react@19.1.1))(react@19.1.1)'
       codemirror:
         specifier: ^5.63.3
         version: 5.65.19
@@ -24,14 +24,14 @@ importers:
         specifier: ^4.2.3
         version: 4.2.3
       final-form:
-        specifier: ^4.20.4
-        version: 4.20.10
+        specifier: ^5.0.0
+        version: 5.0.0
       final-form-arrays:
-        specifier: ^3.0.2
-        version: 3.1.0(final-form@4.20.10)
+        specifier: ^4.0.0
+        version: 4.0.0(final-form@5.0.0)
       final-form-set-field-touched:
         specifier: ^1.0.1
-        version: 1.0.1(final-form@4.20.10)
+        version: 1.0.1(final-form@5.0.0)
       is-hotkey:
         specifier: ^0.2.0
         version: 0.2.0
@@ -46,19 +46,19 @@ importers:
         version: 1.13.3
       overlayscrollbars-react:
         specifier: ^0.3.0
-        version: 0.3.0(overlayscrollbars@1.13.3)(react@18.3.1)
+        version: 0.3.0(overlayscrollbars@1.13.3)(react@19.1.1)
       react-codemirror2:
-        specifier: ^7.2.1
-        version: 7.3.0(codemirror@5.65.19)(react@18.3.1)
+        specifier: ^8.0.1
+        version: 8.0.1(codemirror@5.65.19)(react@19.1.1)
       react-color:
         specifier: ^2.19.3
-        version: 2.19.3(react@18.3.1)
+        version: 2.19.3(react@19.1.1)
       react-final-form-arrays:
-        specifier: ^3.1.3
-        version: 3.1.4(final-form-arrays@3.1.0(final-form@4.20.10))(final-form@4.20.10)(react-final-form@6.5.9(final-form@4.20.10)(react@18.3.1))(react@18.3.1)
+        specifier: ^4.0.0
+        version: 4.0.0(final-form-arrays@4.0.0(final-form@5.0.0))(final-form@5.0.0)(react-final-form@7.0.0(final-form@5.0.0)(react@19.1.1))(react@19.1.1)
       react-use:
         specifier: ^17.3.1
-        version: 17.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 17.6.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       uuid:
         specifier: ^9.0.1
         version: 9.0.1
@@ -91,14 +91,14 @@ importers:
         specifier: ^16.11.7
         version: 16.18.126
       '@types/react':
-        specifier: ^18.2.2
-        version: 18.3.20
+        specifier: ^19.1.1
+        version: 19.1.12
       '@types/react-color':
         specifier: ^3.0.6
-        version: 3.0.13(@types/react@18.3.20)
+        version: 3.0.13(@types/react@19.1.12)
       '@types/react-dom':
-        specifier: ^18.2.3
-        version: 18.3.6(@types/react@18.3.20)
+        specifier: ^19.1.1
+        version: 19.1.9(@types/react@19.1.12)
       '@types/uuid':
         specifier: ^8.3.4
         version: 8.3.4
@@ -151,14 +151,14 @@ importers:
         specifier: ^4.1.2
         version: 4.3.0
       react:
-        specifier: ^18.2.0
-        version: 18.3.1
+        specifier: ^19.1.1
+        version: 19.1.1
       react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
+        specifier: ^19.1.1
+        version: 19.1.1(react@19.1.1)
       react-final-form:
-        specifier: ^6.5.7
-        version: 6.5.9(final-form@4.20.10)(react@18.3.1)
+        specifier: ^7.0.0
+        version: 7.0.0(final-form@5.0.0)(react@19.1.1)
       rimraf:
         specifier: ^5.0.5
         version: 5.0.10
@@ -1558,21 +1558,18 @@ packages:
   '@types/prettier@2.7.3':
     resolution: {integrity: sha512-+68kP9yzs4LMp7VNh8gdzMSPZFL44MLGqiHWvttYJe+6qnuVr4Ek9wSBQoveqY/r+LwjCcU29kNVkidwim+kYA==}
 
-  '@types/prop-types@15.7.14':
-    resolution: {integrity: sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==}
-
   '@types/react-color@3.0.13':
     resolution: {integrity: sha512-2c/9FZ4ixC5T3JzN0LP5Cke2Mf0MKOP2Eh0NPDPWmuVH3NjPyhEjqNMQpN1Phr5m74egAy+p2lYNAFrX1z9Yrg==}
     peerDependencies:
       '@types/react': '*'
 
-  '@types/react-dom@18.3.6':
-    resolution: {integrity: sha512-nf22//wEbKXusP6E9pfOCDwFdHAX4u172eaJI4YkDRQEZiorm6KfYnSC2SWLDMVWUOWPERmJnN0ujeAfTBLvrw==}
+  '@types/react-dom@19.1.9':
+    resolution: {integrity: sha512-qXRuZaOsAdXKFyOhRBg6Lqqc0yay13vN7KrIg4L7N4aaHN68ma9OK3NE1BoDFgFOTfM7zg+3/8+2n8rLUH3OKQ==}
     peerDependencies:
-      '@types/react': ^18.0.0
+      '@types/react': ^19.0.0
 
-  '@types/react@18.3.20':
-    resolution: {integrity: sha512-IPaCZN7PShZK/3t6Q87pfTkRm6oLTd4vztyoj+cbHUF1g3FfVb2tFIL79uCRKEfv16AhqDMBywP2VW3KIZUvcg==}
+  '@types/react@19.1.12':
+    resolution: {integrity: sha512-cMoR+FoAf/Jyq6+Df2/Z41jISvGZZ2eTlnsaJRptmZ76Caldwy1odD4xTr/gNV9VLj0AWgg/nmkevIyUfIIq5w==}
 
   '@types/reactcss@1.2.13':
     resolution: {integrity: sha512-gi3S+aUi6kpkF5vdhUsnkwbiSEIU/BEJyD7kBy2SudWBUuKmJk8AQKE0OVcQQeEy40Azh0lV6uynxlikYIJuwg==}
@@ -2986,6 +2983,11 @@ packages:
     peerDependencies:
       final-form: ^4.20.8
 
+  final-form-arrays@4.0.0:
+    resolution: {integrity: sha512-ya1mbjTmEcmZ8ettYHp/eB4UpfuSjpLJ+grpaQsgxqi1P0wrm+syr/7qLbbslxNLSDA1zoSUthWVCB1O6B9fqg==}
+    peerDependencies:
+      final-form: ^5.0.0
+
   final-form-set-field-touched@1.0.1:
     resolution: {integrity: sha512-yvE5AAs9U3OgJQ9YF8NhSF0I0mJEECvOpkaXNqovloxji5Q6gOZ0DCIAyLAKHluGSpsXKUGORyBm8Hq0beZIqQ==}
     peerDependencies:
@@ -2993,6 +2995,10 @@ packages:
 
   final-form@4.20.10:
     resolution: {integrity: sha512-TL48Pi1oNHeMOHrKv1bCJUrWZDcD3DIG6AGYVNOnyZPr7Bd/pStN0pL+lfzF5BNoj/FclaoiaLenk4XUIFVYng==}
+    engines: {node: '>=8'}
+
+  final-form@5.0.0:
+    resolution: {integrity: sha512-HByosvP7x3N4bWTCPoBeUeoMatadewRifxaH3qhCQI2DBwFNO0m5wxETLVUXNGWz2yokdSCMdJEvtjfZoXnqDA==}
     engines: {node: '>=8'}
 
   find-cache-dir@3.3.2:
@@ -4647,21 +4653,21 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
 
-  react-codemirror2@7.3.0:
-    resolution: {integrity: sha512-gCgJPXDX+5iaPolkHAu1YbJ92a2yL7Je4TuyO3QEqOtI/d6mbEk08l0oIm18R4ctuT/Sl87X63xIMBnRQBXYXA==}
+  react-codemirror2@8.0.1:
+    resolution: {integrity: sha512-ZALowE5sGK1t66i0Fm1hoJLWT/iZHNjaAmcjwgYl9gyl2v1sqWwxzWHLmgq6K9KCk7p5+I+U3jMF1vsLaIkrmA==}
     peerDependencies:
       codemirror: 5.x
-      react: '>=15.5 <=17.x'
+      react: '>=15.5 <=18.x'
 
   react-color@2.19.3:
     resolution: {integrity: sha512-LEeGE/ZzNLIsFWa1TMe8y5VYqr7bibneWmvJwm1pCn/eNmrabWDh659JSPn9BuaMpEfU83WTOJfnCcjDZwNQTA==}
     peerDependencies:
       react: '*'
 
-  react-dom@18.3.1:
-    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
+  react-dom@19.1.1:
+    resolution: {integrity: sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw==}
     peerDependencies:
-      react: ^18.3.1
+      react: ^19.1.1
 
   react-final-form-arrays@3.1.4:
     resolution: {integrity: sha512-siVFAolUAe29rMR6u8VwepoysUcUdh6MLV2OWnCtKpsPRUdT9VUgECjAPaVMAH2GROZNiVB9On1H9MMrm9gdpg==}
@@ -4671,11 +4677,19 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-final-form: ^6.2.1
 
-  react-final-form@6.5.9:
-    resolution: {integrity: sha512-x3XYvozolECp3nIjly+4QqxdjSSWfcnpGEL5K8OBT6xmGrq5kBqbA6+/tOqoom9NwqIPPbxPNsOViFlbKgowbA==}
+  react-final-form-arrays@4.0.0:
+    resolution: {integrity: sha512-mC/FcaQY0NdVLmpwjJGFY8V77BzFqiI2QBJRDHwWRNkLqOCYB9v5WVhcjbj5NfXMqDl7GmG2iCCndNX+S9teHw==}
     peerDependencies:
-      final-form: ^4.20.4
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      final-form: ^5.0.0
+      final-form-arrays: ^4.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-final-form: ^7.0.0
+
+  react-final-form@7.0.0:
+    resolution: {integrity: sha512-aEeAWbSsCLVXa4GBkJtjjyhPyX4L/Pgp5P/jXZwdz0YYcK6Zs/0PkgB+qWMSyIsbbGGE7m9yYlSpui5E5Gx26A==}
+    peerDependencies:
+      final-form: ^5.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   react-focus-lock@2.13.6:
     resolution: {integrity: sha512-ehylFFWyYtBKXjAO9+3v8d0i+cnc1trGS0vlTGhzFW1vbFXVUTmR8s2tt/ZQG8x5hElg6rhENlLG1H3EZK0Llg==}
@@ -4717,8 +4731,8 @@ packages:
       react: '*'
       react-dom: '*'
 
-  react@18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
+  react@19.1.1:
+    resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
     engines: {node: '>=0.10.0'}
 
   reactcss@1.2.3:
@@ -4972,8 +4986,8 @@ packages:
     resolution: {integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==}
     engines: {node: '>=10'}
 
-  scheduler@0.23.2:
-    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+  scheduler@0.26.0:
+    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
 
   schema-utils@2.7.1:
     resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==}
@@ -5882,29 +5896,29 @@ packages:
 
 snapshots:
 
-  '@TeamDiverst/easy-email-core@5.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@TeamDiverst/easy-email-core@5.0.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       he: 1.2.0
       js-beautify: 1.15.4
       lodash: 4.17.21
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
       uuid: 8.3.2
 
-  '@TeamDiverst/easy-email-editor@5.0.0(@TeamDiverst/easy-email-core@5.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mjml-browser@4.15.3)(react-dom@18.3.1(react@18.3.1))(react-final-form@6.5.9(final-form@4.20.10)(react@18.3.1))(react@18.3.1)':
+  '@TeamDiverst/easy-email-editor@5.0.0(@TeamDiverst/easy-email-core@5.0.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(mjml-browser@4.15.3)(react-dom@19.1.1(react@19.1.1))(react-final-form@7.0.0(final-form@5.0.0)(react@19.1.1))(react@19.1.1)':
     dependencies:
-      '@teamdiverst/easy-email-core': '@TeamDiverst/easy-email-core@5.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)'
+      '@teamdiverst/easy-email-core': '@TeamDiverst/easy-email-core@5.0.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)'
       final-form: 4.20.10
       final-form-arrays: 3.1.0(final-form@4.20.10)
       final-form-set-field-touched: 1.0.1(final-form@4.20.10)
       is-hotkey: 0.2.0
       lodash: 4.17.21
       mjml-browser: 4.15.3
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-final-form: 6.5.9(final-form@4.20.10)(react@18.3.1)
-      react-final-form-arrays: 3.1.4(final-form-arrays@3.1.0(final-form@4.20.10))(final-form@4.20.10)(react-final-form@6.5.9(final-form@4.20.10)(react@18.3.1))(react@18.3.1)
-      react-use: 17.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+      react-final-form: 7.0.0(final-form@5.0.0)(react@19.1.1)
+      react-final-form-arrays: 3.1.4(final-form-arrays@3.1.0(final-form@4.20.10))(final-form@4.20.10)(react-final-form@7.0.0(final-form@5.0.0)(react@19.1.1))(react@19.1.1)
+      react-use: 17.6.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
 
   '@ampproject/remapping@2.3.0':
     dependencies:
@@ -5915,7 +5929,7 @@ snapshots:
     dependencies:
       color: 3.2.1
 
-  '@arco-design/web-react@2.66.1(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@arco-design/web-react@2.66.1(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@arco-design/color': 0.4.0
       '@babel/runtime': 7.27.0
@@ -5925,11 +5939,11 @@ snapshots:
       dayjs: 1.11.13
       lodash: 4.17.21
       number-precision: 1.6.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-focus-lock: 2.13.6(@types/react@18.3.20)(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+      react-focus-lock: 2.13.6(@types/react@19.1.12)(react@19.1.1)
       react-is: 18.3.1
-      react-transition-group: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-transition-group: 4.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       resize-observer-polyfill: 1.5.1
       scroll-into-view-if-needed: 2.2.31
       shallowequal: 1.1.0
@@ -6776,9 +6790,9 @@ snapshots:
 
   '@hutson/parse-repository-url@3.0.2': {}
 
-  '@icons/material@0.2.4(react@18.3.1)':
+  '@icons/material@0.2.4(react@19.1.1)':
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -7813,25 +7827,22 @@ snapshots:
 
   '@types/prettier@2.7.3': {}
 
-  '@types/prop-types@15.7.14': {}
-
-  '@types/react-color@3.0.13(@types/react@18.3.20)':
+  '@types/react-color@3.0.13(@types/react@19.1.12)':
     dependencies:
-      '@types/react': 18.3.20
-      '@types/reactcss': 1.2.13(@types/react@18.3.20)
+      '@types/react': 19.1.12
+      '@types/reactcss': 1.2.13(@types/react@19.1.12)
 
-  '@types/react-dom@18.3.6(@types/react@18.3.20)':
+  '@types/react-dom@19.1.9(@types/react@19.1.12)':
     dependencies:
-      '@types/react': 18.3.20
+      '@types/react': 19.1.12
 
-  '@types/react@18.3.20':
+  '@types/react@19.1.12':
     dependencies:
-      '@types/prop-types': 15.7.14
       csstype: 3.1.3
 
-  '@types/reactcss@1.2.13(@types/react@18.3.20)':
+  '@types/reactcss@1.2.13(@types/react@19.1.12)':
     dependencies:
-      '@types/react': 18.3.20
+      '@types/react': 19.1.12
 
   '@types/stack-utils@2.0.3': {}
 
@@ -9429,11 +9440,23 @@ snapshots:
     dependencies:
       final-form: 4.20.10
 
+  final-form-arrays@4.0.0(final-form@5.0.0):
+    dependencies:
+      final-form: 5.0.0
+
   final-form-set-field-touched@1.0.1(final-form@4.20.10):
     dependencies:
       final-form: 4.20.10
 
+  final-form-set-field-touched@1.0.1(final-form@5.0.0):
+    dependencies:
+      final-form: 5.0.0
+
   final-form@4.20.10:
+    dependencies:
+      '@babel/runtime': 7.27.0
+
+  final-form@5.0.0:
     dependencies:
       '@babel/runtime': 7.27.0
 
@@ -10976,15 +10999,15 @@ snapshots:
 
   mylas@2.1.13: {}
 
-  nano-css@5.6.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  nano-css@5.6.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
       css-tree: 1.1.3
       csstype: 3.1.3
       fastest-stable-stringify: 2.0.2
       inline-style-prefixer: 7.0.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
       rtl-css-js: 1.16.1
       stacktrace-js: 2.0.2
       stylis: 4.3.6
@@ -11251,10 +11274,10 @@ snapshots:
       os-homedir: 1.0.2
       os-tmpdir: 1.0.2
 
-  overlayscrollbars-react@0.3.0(overlayscrollbars@1.13.3)(react@18.3.1):
+  overlayscrollbars-react@0.3.0(overlayscrollbars@1.13.3)(react@19.1.1):
     dependencies:
       overlayscrollbars: 1.13.3
-      react: 18.3.1
+      react: 19.1.1
 
   overlayscrollbars@1.13.3: {}
 
@@ -11529,58 +11552,65 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  react-clientside-effect@1.2.7(react@18.3.1):
+  react-clientside-effect@1.2.7(react@19.1.1):
     dependencies:
       '@babel/runtime': 7.27.0
-      react: 18.3.1
+      react: 19.1.1
 
-  react-codemirror2@7.3.0(codemirror@5.65.19)(react@18.3.1):
+  react-codemirror2@8.0.1(codemirror@5.65.19)(react@19.1.1):
     dependencies:
       codemirror: 5.65.19
-      react: 18.3.1
+      react: 19.1.1
 
-  react-color@2.19.3(react@18.3.1):
+  react-color@2.19.3(react@19.1.1):
     dependencies:
-      '@icons/material': 0.2.4(react@18.3.1)
+      '@icons/material': 0.2.4(react@19.1.1)
       lodash: 4.17.21
       lodash-es: 4.17.21
       material-colors: 1.2.6
       prop-types: 15.8.1
-      react: 18.3.1
-      reactcss: 1.2.3(react@18.3.1)
+      react: 19.1.1
+      reactcss: 1.2.3(react@19.1.1)
       tinycolor2: 1.6.0
 
-  react-dom@18.3.1(react@18.3.1):
+  react-dom@19.1.1(react@19.1.1):
     dependencies:
-      loose-envify: 1.4.0
-      react: 18.3.1
-      scheduler: 0.23.2
+      react: 19.1.1
+      scheduler: 0.26.0
 
-  react-final-form-arrays@3.1.4(final-form-arrays@3.1.0(final-form@4.20.10))(final-form@4.20.10)(react-final-form@6.5.9(final-form@4.20.10)(react@18.3.1))(react@18.3.1):
+  react-final-form-arrays@3.1.4(final-form-arrays@3.1.0(final-form@4.20.10))(final-form@4.20.10)(react-final-form@7.0.0(final-form@5.0.0)(react@19.1.1))(react@19.1.1):
     dependencies:
       '@babel/runtime': 7.27.0
       final-form: 4.20.10
       final-form-arrays: 3.1.0(final-form@4.20.10)
-      react: 18.3.1
-      react-final-form: 6.5.9(final-form@4.20.10)(react@18.3.1)
+      react: 19.1.1
+      react-final-form: 7.0.0(final-form@5.0.0)(react@19.1.1)
 
-  react-final-form@6.5.9(final-form@4.20.10)(react@18.3.1):
+  react-final-form-arrays@4.0.0(final-form-arrays@4.0.0(final-form@5.0.0))(final-form@5.0.0)(react-final-form@7.0.0(final-form@5.0.0)(react@19.1.1))(react@19.1.1):
     dependencies:
       '@babel/runtime': 7.27.0
-      final-form: 4.20.10
-      react: 18.3.1
+      final-form: 5.0.0
+      final-form-arrays: 4.0.0(final-form@5.0.0)
+      react: 19.1.1
+      react-final-form: 7.0.0(final-form@5.0.0)(react@19.1.1)
 
-  react-focus-lock@2.13.6(@types/react@18.3.20)(react@18.3.1):
+  react-final-form@7.0.0(final-form@5.0.0)(react@19.1.1):
+    dependencies:
+      '@babel/runtime': 7.27.0
+      final-form: 5.0.0
+      react: 19.1.1
+
+  react-focus-lock@2.13.6(@types/react@19.1.12)(react@19.1.1):
     dependencies:
       '@babel/runtime': 7.27.0
       focus-lock: 1.3.6
       prop-types: 15.8.1
-      react: 18.3.1
-      react-clientside-effect: 1.2.7(react@18.3.1)
-      use-callback-ref: 1.3.3(@types/react@18.3.20)(react@18.3.1)
-      use-sidecar: 1.1.3(@types/react@18.3.20)(react@18.3.1)
+      react: 19.1.1
+      react-clientside-effect: 1.2.7(react@19.1.1)
+      use-callback-ref: 1.3.3(@types/react@19.1.12)(react@19.1.1)
+      use-sidecar: 1.1.3(@types/react@19.1.12)(react@19.1.1)
     optionalDependencies:
-      '@types/react': 18.3.20
+      '@types/react': 19.1.12
 
   react-is@16.13.1: {}
 
@@ -11590,21 +11620,21 @@ snapshots:
 
   react-refresh@0.10.0: {}
 
-  react-transition-group@4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-transition-group@4.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       '@babel/runtime': 7.27.0
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
-  react-universal-interface@0.6.2(react@18.3.1)(tslib@2.8.1):
+  react-universal-interface@0.6.2(react@19.1.1)(tslib@2.8.1):
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
       tslib: 2.8.1
 
-  react-use@17.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-use@17.6.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       '@types/js-cookie': 2.2.7
       '@xobotyi/scrollbar-width': 1.9.5
@@ -11612,10 +11642,10 @@ snapshots:
       fast-deep-equal: 3.1.3
       fast-shallow-equal: 1.0.0
       js-cookie: 2.2.1
-      nano-css: 5.6.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-universal-interface: 0.6.2(react@18.3.1)(tslib@2.8.1)
+      nano-css: 5.6.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+      react-universal-interface: 0.6.2(react@19.1.1)(tslib@2.8.1)
       resize-observer-polyfill: 1.5.1
       screenfull: 5.2.0
       set-harmonic-interval: 1.0.1
@@ -11623,14 +11653,12 @@ snapshots:
       ts-easing: 0.2.0
       tslib: 2.8.1
 
-  react@18.3.1:
-    dependencies:
-      loose-envify: 1.4.0
+  react@19.1.1: {}
 
-  reactcss@1.2.3(react@18.3.1):
+  reactcss@1.2.3(react@19.1.1):
     dependencies:
       lodash: 4.17.21
-      react: 18.3.1
+      react: 19.1.1
 
   read-cmd-shim@2.0.0: {}
 
@@ -11922,9 +11950,7 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
-  scheduler@0.23.2:
-    dependencies:
-      loose-envify: 1.4.0
+  scheduler@0.26.0: {}
 
   schema-utils@2.7.1:
     dependencies:
@@ -12593,20 +12619,20 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
-  use-callback-ref@1.3.3(@types/react@18.3.20)(react@18.3.1):
+  use-callback-ref@1.3.3(@types/react@19.1.12)(react@19.1.1):
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
       tslib: 2.8.1
     optionalDependencies:
-      '@types/react': 18.3.20
+      '@types/react': 19.1.12
 
-  use-sidecar@1.1.3(@types/react@18.3.20)(react@18.3.1):
+  use-sidecar@1.1.3(@types/react@19.1.12)(react@19.1.1):
     dependencies:
       detect-node-es: 1.1.0
-      react: 18.3.1
+      react: 19.1.1
       tslib: 2.8.1
     optionalDependencies:
-      '@types/react': 18.3.20
+      '@types/react': 19.1.12
 
   util-deprecate@1.0.2: {}
 

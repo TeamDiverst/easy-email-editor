@@ -5,7 +5,7 @@ import {
   MERGE_TAG_CLASS_NAME,
 } from '@teamdiverst/easy-email-core';
 import { camelCase } from 'lodash';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { isTextBlock } from './isTextBlock';
 import { MergeTagBadge } from './MergeTagBadge';
 import {
@@ -152,7 +152,7 @@ function createElement(
   type: string,
   props?: React.ClassAttributes<Element> & {
     style?: {} | undefined;
-    children?: JSX.Element[] | null;
+    children?: ReactNode[] | null;
     key: string | number;
     tabIndex?: string;
     class?: string;

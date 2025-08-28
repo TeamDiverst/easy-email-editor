@@ -1,5 +1,5 @@
 import { blocks } from '../components/blocks';
-import { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 type ObjectComponent = { [key: string]: (...args: any) => ReactNode };
 
@@ -12,7 +12,7 @@ export class BlockAttributeConfigurationManager {
     });
   }
 
-  public static get<T extends ObjectComponent>(name: keyof T): () => JSX.Element | null {
+  public static get<T extends ObjectComponent>(name: keyof T): () => ReactElement | null {
     return (this.map as any)[name];
   }
 

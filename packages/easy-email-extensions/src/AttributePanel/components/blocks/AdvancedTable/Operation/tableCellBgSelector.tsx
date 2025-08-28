@@ -1,7 +1,7 @@
 import { Input } from '@arco-design/web-react';
 import React, { useEffect } from 'react';
-import { render } from 'react-dom';
 import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
 interface CellBackgroundSelectorProps {
   bgColorHandler: (color: string) => void;
@@ -60,13 +60,13 @@ const getCellBackgroundSelectorRoot = (
   rootDom: any,
 ) => {
   const node = document.createElement('div');
+  const root = createRoot(node);
 
-  render(
+  root.render(
     <CellBackgroundSelector
       bgColorHandler={bgColorHandler}
       rootDom={rootDom}
     />,
-    node,
   );
   return node;
 };
