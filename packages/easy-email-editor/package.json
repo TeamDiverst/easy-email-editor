@@ -68,7 +68,7 @@
     "vite": "^2.6.14"
   },
   "peerDependencies": {
-    "@teamdiverst/easy-email-core": "^5.0.4-beta",
+    "@teamdiverst/easy-email-core": "^5.0.3",
     "mjml-browser": "^4.10.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
