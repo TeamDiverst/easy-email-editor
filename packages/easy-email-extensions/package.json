@@ -2,7 +2,7 @@
   "name": "@TeamDiverst/easy-email-extensions",
   "license": "MIT",
   "description": "Email editor",
-"version": "5.0.2",
+  "version": "5.0.3",
   "author": "m-Ryan",
   "repository": {
     "type": "git",
