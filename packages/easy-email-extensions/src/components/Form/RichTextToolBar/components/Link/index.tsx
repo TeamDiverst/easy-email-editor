@@ -28,7 +28,7 @@ function getAnchorElement(
   return getAnchorElement(node.parentNode);
 }
 
-function getLinkNode(
+export function getLinkNode(
   currentRange: Range | null | undefined,
 ): HTMLAnchorElement | null {
   let linkNode: HTMLAnchorElement | null = null;
