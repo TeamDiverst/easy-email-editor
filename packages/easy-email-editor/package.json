@@ -58,8 +58,8 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "mjml-browser": "^4.10.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-final-form": "^6.5.7",
     "rimraf": "^3.0.2",
     "sass": "^1.43.4",
@@ -70,8 +70,8 @@
   "peerDependencies": {
     "@teamdiverst/easy-email-core": "^5.0.0",
     "mjml-browser": "^4.10.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-final-form": "^6.5.7"
   },
   "gitHead": "2a08e8af15766344de708d891c1c8ea31bb77646"

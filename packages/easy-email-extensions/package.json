@@ -63,8 +63,8 @@
     "jsdom": "^17.0.0",
     "lerna": "^4.0.0",
     "less": "^4.1.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-final-form": "^6.5.7",
     "rimraf": "^5.0.5",
     "rollup-plugin-visualizer": "^5.5.2",
@@ -97,8 +97,8 @@
   "peerDependencies": {
     "@teamdiverst/easy-email-core": "^5.0.0",
     "@teamdiverst/easy-email-editor": "^5.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-final-form": "^6.5.7"
   },
   "gitHead": "bb5757eb3146f55c31d4354f1480939c3af8efe1"
