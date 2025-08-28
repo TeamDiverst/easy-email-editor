@@ -77,7 +77,9 @@ export function DesktopEmailPreview() {
           </div>
           {createPortal(
             <>
-              {fonts.map((item, index) => (
+              {fonts.map((item: {
+                href: string;
+              }, index: number) => (
                 <link
                   key={index}
                   href={item.href}

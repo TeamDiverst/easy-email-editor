@@ -26,7 +26,7 @@ export const RecordContext = React.createContext<{
 
 export const RecordProvider: React.FC<{ children?: React.ReactNode }> = props => {
   const formState = useFormState<IEmailTemplate>();
-  const [data, setData] = useState<Array<IEmailTemplate>>([]);
+  const [data, setData] = useState<IEmailTemplate[]>([]);
   const [index, setIndex] = useState(-1);
   const indexRef = useRefState(index);
 
@@ -71,8 +71,8 @@ export const RecordProvider: React.FC<{ children?: React.ReactNode }> = props =>
 
     const isChanged = !(
       currentItem &&
-      isEqual(formState.values.content, currentItem.content) &&
-      formState.values.subTitle === currentItem.subTitle &&
+      isEqual(formState.values?.content, currentItem.content) &&
+      formState.values?.subTitle === currentItem.subTitle &&
       formState.values.subTitle === currentItem.subTitle
     );
 
@@ -82,9 +82,7 @@ export const RecordProvider: React.FC<{ children?: React.ReactNode }> = props =>
       setData(oldData => {
         const list = oldData.slice(0, indexRef.current + 1);
 
-        const newData = [...list, cloneDeep(formState.values)].slice(-MAX_RECORD_SIZE);
-
-        return newData;
+        return [...list, cloneDeep(formState.values)].slice(-MAX_RECORD_SIZE) as IEmailTemplate[];
       });
       setIndex(Math.min(indexRef.current + 1, MAX_RECORD_SIZE - 1));
     }

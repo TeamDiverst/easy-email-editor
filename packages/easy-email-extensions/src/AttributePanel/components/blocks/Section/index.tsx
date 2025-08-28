@@ -2,7 +2,9 @@ import React, { useCallback } from 'react';
 import { Padding } from '@extensions/AttributePanel/components/attributes/Padding';
 import { Background } from '@extensions/AttributePanel/components/attributes/Background';
 import { Border } from '@extensions/AttributePanel/components/attributes/Border';
-import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
+import {
+  AttributesPanelWrapper,
+} from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { Collapse, Grid, Space, Switch } from '@arco-design/web-react';
 import { Stack, useBlock, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { BasicType, BlockManager } from '@teamdiverst/easy-email-core';
@@ -16,7 +18,7 @@ export function Section() {
   const noWrap = focusBlock?.data.value.noWrap;
 
   const onChange = useCallback(
-    checked => {
+      (checked: boolean) => {
       if (!focusBlock) return;
       focusBlock.data.value.noWrap = checked;
       if (checked) {
@@ -24,6 +26,7 @@ export function Section() {
         for (let i = 0; i < children.length; i++) {
           const child = children[i];
           if (!child) continue;
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
           if (child.type === BasicType.GROUP) {
             children.splice(i, 1, ...child.children);
           }
@@ -36,6 +39,7 @@ export function Section() {
       } else {
         if (
           focusBlock.children.length === 1 &&
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
           focusBlock.children[0].type === BasicType.GROUP
         ) {
           focusBlock.children = focusBlock.children[0]?.children || [];

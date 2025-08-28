@@ -10,6 +10,7 @@ import { useHoverIdx } from './useHoverIdx';
 import { getInsertPosition } from '@/utils/getInsertPosition';
 import { useEditorProps } from './useEditorProps';
 import { DATA_ATTRIBUTE_DROP_CONTAINER } from '@/constants';
+import { IEmailTemplate } from '@';
 
 export function useDropBlock() {
   const [ref, setRef] = useState<HTMLElement | null>(null);
@@ -104,7 +105,7 @@ export function useDropBlock() {
           const directionPosition = getDirectionPosition(ev);
           const idx = getNodeIdxFromClassName(blockNode.classList)!;
           const positionData = getInsertPosition({
-            context: cacheValues.current,
+            context: cacheValues.current as IEmailTemplate,
             idx,
             directionPosition,
             dragType: cacheDataTransfer.current.type,
