@@ -1,4 +1,4 @@
-import React, { Children, isValidElement } from 'react';
+import React, { Children, isValidElement, ReactElement } from 'react';
 
 // Wraps `element` in `Component`, if it is not already an instance of
 // `Component`. If `props` is passed, those will be added as props on the
@@ -43,6 +43,7 @@ export function isElementOfType<P>(
   const { type: defaultType } = element;
   // Type override allows components to bypass default wrapping behavior. Ex: Stack, ResourceList...
   // See https://github.com/Shopify/app-extension-libs/issues/996#issuecomment-710437088
+  // @ts-ignore
   const overrideType = element.props?.__type__;
   const type = overrideType || defaultType;
   const Components = Array.isArray(Component) ? Component : [Component];
@@ -73,7 +74,7 @@ export function ConditionalWrapper({
   condition,
   wrapper,
   children,
-}: ConditionalWrapperProps): JSX.Element {
+}: ConditionalWrapperProps): ReactElement {
   return condition ? wrapper(children) : children;
 }
 
@@ -85,7 +86,7 @@ interface ConditionalRenderProps {
 export function ConditionalRender({
   condition,
   children,
-}: ConditionalRenderProps): JSX.Element {
+}: ConditionalRenderProps): ReactElement {
   return condition ? children : null;
 }
 
