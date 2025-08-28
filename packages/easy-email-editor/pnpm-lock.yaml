@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@teamdiverst/easy-email-core':
-        specifier: ^5.0.4-beta
-        version: '@TeamDiverst/easy-email-core@5.0.4-beta(react-dom@19.1.1(react@19.1.1))(react@19.1.1)'
+        specifier: ^5.0.3
+        version: '@TeamDiverst/easy-email-core@5.0.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1)'
       final-form:
         specifier: ^5.0.0
         version: 5.0.0
@@ -108,11 +108,11 @@ importers:
 
 packages:
 
-  '@TeamDiverst/easy-email-core@5.0.4-beta':
-    resolution: {integrity: sha512-D6eskNeDLPjQXU5MhRLlUI8IlBi1jVWi2Wgs6pOzqNwOu/biE63DLGyN3Oy0guZ5f7cPkeui64jgLEAwAn0NMw==, tarball: https://npm.pkg.github.com/download/@TeamDiverst/easy-email-core/5.0.4-beta/f5cc70df65e529409b82dfc971d2a9c47bdfda8a}
+  '@TeamDiverst/easy-email-core@5.0.3':
+    resolution: {integrity: sha512-P9IPikr75BKRF6CtOhC3SI8HPQW0MB5uSoIHRYBJ6e3veJfmZHVOPdfoY3g6M5C4F0kYVXrdmO0FJLvBGCA11Q==, tarball: https://npm.pkg.github.com/download/@TeamDiverst/easy-email-core/5.0.3/4805e40e0fdc2540b785a56b595a15e1a54593a4}
     peerDependencies:
-      react: ^19.1.1
-      react-dom: ^19.1.1
+      react: ^18.2.0
+      react-dom: ^18.2.0
 
   '@babel/runtime@7.28.3':
     resolution: {integrity: sha512-9uIQ10o0WGdpP6GDhXcdOJPJuDgFtIDtN/9+ArJQ2NAfAmiuhTQdzkaTGR33v43GYS2UrSA0eX2pPPHoFVvpxA==}
@@ -2209,7 +2209,7 @@ packages:
 
 snapshots:
 
-  '@TeamDiverst/easy-email-core@5.0.4-beta(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@TeamDiverst/easy-email-core@5.0.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       he: 1.2.0
       js-beautify: 1.15.4
