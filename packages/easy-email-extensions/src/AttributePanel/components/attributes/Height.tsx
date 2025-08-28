@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { TextField } from '../../../components/Form';
-import { useFocusIdx, Stack } from '@teamdiverst/easy-email-editor';
+import { Stack, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { UseFieldConfig } from 'react-final-form';
 
 export function Height({
@@ -8,7 +8,7 @@ export function Height({
   config,
 }: {
   inline?: boolean;
-  config?: UseFieldConfig<any>;
+  config?: UseFieldConfig;
 }) {
   const { focusIdx } = useFocusIdx();
 

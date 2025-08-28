@@ -18,16 +18,17 @@ export function EyeIcon({
         <IconFont iconName='icon-eye' />
       </div>
     );
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
   if (blockData.type === BasicType.PAGE) return null;
 
   return blockData.data.hidden ? (
     <IconFont
-      onClick={(ev) => onToggleVisible(blockData, ev)}
+      onClick={(ev: React.MouseEvent<Element, MouseEvent>) => onToggleVisible(blockData, ev)}
       iconName='icon-eye-invisible'
     />
   ) : (
     <IconFont
-      onClick={(ev) => onToggleVisible(blockData, ev)}
+      onClick={(ev: React.MouseEvent<Element, MouseEvent>) => onToggleVisible(blockData, ev)}
       iconName='icon-eye'
     />
   );

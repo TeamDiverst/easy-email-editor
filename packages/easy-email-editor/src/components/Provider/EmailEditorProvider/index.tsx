@@ -51,7 +51,7 @@ export const EmailEditorProvider = <T extends any>(
     <Form<IEmailTemplate>
       initialValues={initialValues}
       onSubmit={onSubmit}
-      enableReinitialize
+      keepDirtyOnReinitialize
       validate={validationSchema}
       mutators={{ ...arrayMutators, setFieldTouched: setFieldTouched as any }}
       subscription={{ submitting: true, pristine: true }}
