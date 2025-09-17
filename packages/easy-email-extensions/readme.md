@@ -14,12 +14,12 @@ $ yarn add easy-email-extensions
 
 ```js
 import React from 'react';
-import { BlockManager, BasicType, AdvancedType } from 'easy-email-core';
-import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
-import { ExtensionProps, StandardLayout } from 'easy-email-extensions';
+import { BlockManager, BasicType, AdvancedType } from '@teamdiverst/easy-email-core';
+import { EmailEditor, EmailEditorProvider } from '@teamdiverst/easy-email-editor';
+import { ExtensionProps, StandardLayout } from '@teamdiverst/easy-email-extensions';
 
-import 'easy-email-editor/lib/style.css';
-import 'easy-email-extensions/lib/style.css';
+import '@teamdiverst/easy-email-editor/lib/style.css';
+import '@teamdiverst/easy-email-extensions/lib/style.css';
 
 const categories: ExtensionProps['categories'] = [
   {

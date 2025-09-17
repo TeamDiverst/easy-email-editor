@@ -1,10 +1,10 @@
 import { Grid, PopoverProps, Space, Tooltip } from '@arco-design/web-react';
 import React, { useCallback, useMemo } from 'react';
 import { Form } from 'react-final-form';
-import { getIframeDocument, IconFont, Stack, TextStyle } from 'easy-email-editor';
+import { getIframeDocument, IconFont, Stack, TextStyle } from '@teamdiverst/easy-email-editor';
 import { SearchField, SwitchField } from '@extensions/components/Form';
 import { ToolItem } from '../ToolItem';
-import { EMAIL_BLOCK_CLASS_NAME } from 'easy-email-core';
+import { EMAIL_BLOCK_CLASS_NAME } from '@teamdiverst/easy-email-core';
 
 export interface LinkParams {
   link: string;

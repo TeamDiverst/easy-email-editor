@@ -2,7 +2,7 @@ import { cloneDeep } from 'lodash';
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import TableColumnTool from './tableTool';
-import { DATA_RENDER_COUNT, getIframeDocument, useBlock, useFocusIdx } from 'easy-email-editor';
+import { DATA_RENDER_COUNT, getIframeDocument, useBlock, useFocusIdx } from '@teamdiverst/easy-email-editor';
 
 export function TableOperation() {
   const iframeDocument = getIframeDocument();

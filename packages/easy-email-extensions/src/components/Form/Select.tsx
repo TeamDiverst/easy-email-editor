@@ -12,7 +12,7 @@ export function Select(props: SelectProps) {
   return (
     <ArcoSelect
       {...props}
-      dropdownMenuClassName='easy-email-overlay'
+      dropdownMenuClassName='@teamdiverst/easy-email-overlay'
       style={merge({ width: '100%', }, props.style)}
       value={props.value}
       onChange={props.onChange}

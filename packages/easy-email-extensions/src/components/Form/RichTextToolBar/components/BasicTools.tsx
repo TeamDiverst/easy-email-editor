@@ -4,9 +4,9 @@ import {
   useEditorProps,
   useFocusIdx,
   getIframeDocument
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 import { useAddToCollection } from '@extensions/hooks/useAddToCollection';
-import { getParentIdx } from 'easy-email-core';
+import { getParentIdx } from '@teamdiverst/easy-email-core';
 import React from 'react';
 import { ToolItem } from './ToolItem';
 

@@ -6,7 +6,7 @@ import {
   useRefState,
   getIframeDocument,
   getEditorRoot
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 import { get } from 'lodash';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -17,7 +17,7 @@ import { useSelectionRange } from '@extensions/AttributePanel/hooks/useSelection
 const removeAllActiveBadge = () => {
   getIframeDocument()?.querySelectorAll('.easy-email-merge-tag')
   .forEach((item) => {
-    item.classList.remove('easy-email-merge-tag-focus');
+    item.classList.remove('@teamdiverst/easy-email-merge-tag-focus');
   });
 
   const popoverNode = getIframeDocument()?.querySelectorAll(
@@ -78,9 +78,9 @@ export function MergeTagBadgePrompt() {
       const target = e.target;
       if (
         target instanceof HTMLInputElement &&
-        target.classList.contains('easy-email-merge-tag')
+        target.classList.contains('@teamdiverst/easy-email-merge-tag')
       ) {
-        target.classList.add('easy-email-merge-tag-focus');
+        target.classList.add('@teamdiverst/easy-email-merge-tag-focus');
         const namePath = target.value;
         if (!onChangeMergeTag) {
           focusMergeTag(target);
@@ -137,7 +137,7 @@ export function MergeTagBadgePrompt() {
       {(root && root?.body) && createPortal(<style>{stylesText}</style>, root.body as any)}
       {textContainer && createPortal(
         <div ref={popoverRef} onClick={onClick}
-             className={classnames('easy-email-merge-tag-popover')}
+             className={classnames('@teamdiverst/easy-email-merge-tag-popover')}
         >
           <div className="easy-email-merge-tag-popover-container">
             <h3>
@@ -146,7 +146,7 @@ export function MergeTagBadgePrompt() {
                         onClick={onClose}
               />
             </h3>
-            <div className={'easy-email-merge-tag-popover-desc'}>
+            <div className={'@teamdiverst/easy-email-merge-tag-popover-desc'}>
               <p>
                 {t('If a personalized text value isn\"t available, then a default value is shown.')}
               </p>

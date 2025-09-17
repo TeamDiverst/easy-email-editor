@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import { RICH_TEXT_TOOL_BAR } from '@extensions/constants';
-import { getIframeDocument } from 'easy-email-editor';
+import { getIframeDocument } from '@teamdiverst/easy-email-editor';
 import React, { useEffect, useMemo, useState } from 'react';
 
 export const SelectionRangeContext = React.createContext<{

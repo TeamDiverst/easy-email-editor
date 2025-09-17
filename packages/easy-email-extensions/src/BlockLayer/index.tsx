@@ -9,7 +9,7 @@ import {
   useFocusIdx,
   useHoverIdx,
   useRefState,
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 import {
   BasicType,
   BlockManager,
@@ -19,7 +19,7 @@ import {
   getPageIdx,
   getParentIdx,
   IBlockData,
-} from 'easy-email-core';
+} from '@teamdiverst/easy-email-core';
 import styles from './index.module.scss';
 import { cloneDeep, get, isString, isEqual } from 'lodash';
 import { EyeIcon } from './components/EyeIcon';
