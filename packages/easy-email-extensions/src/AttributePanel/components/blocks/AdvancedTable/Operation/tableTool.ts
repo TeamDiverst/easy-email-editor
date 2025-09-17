@@ -7,8 +7,8 @@ import {
   getTdBoundaryIndex,
   setStyle,
 } from './util';
-import { AdvancedTableBlock } from 'easy-email-core';
-import { getIframeDocument } from 'easy-email-editor';
+import { AdvancedTableBlock } from '@teamdiverst/easy-email-core';
+import { getIframeDocument } from '@teamdiverst/easy-email-editor';
 
 interface IBorderTool {
   top: Element;

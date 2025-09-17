@@ -3,7 +3,7 @@ import {
   ContentEditableType,
   getIframeDocument,
   DATA_CONTENT_EDITABLE_TYPE,
-} from 'easy-email-editor';
+} from '@teamdiverst/easy-email-editor';
 import { useField, useForm } from 'react-final-form';
 
 export interface InlineTextProps {

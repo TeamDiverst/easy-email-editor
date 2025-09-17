@@ -30,12 +30,12 @@ const CellBackgroundSelector: React.FC<CellBackgroundSelectorProps> = ({
   return (
     <div
       onClick={e => e.stopPropagation()}
-      className='easy-email-table-operation-menu-bg-item'
+      className='@teamdiverst/easy-email-table-operation-menu-bg-item'
     >
       <div>Set Background Color</div>
       <div>
-        <div className='easy-email-table-operation-menu-bg-item-color'>
-          <div style={{ backgroundColor: color }}></div>
+        <div className='@teamdiverst/easy-email-table-operation-menu-bg-item-color'>
+          <div style={{ backgroundColor: color }} />
           <input
             type='color'
             value={color}

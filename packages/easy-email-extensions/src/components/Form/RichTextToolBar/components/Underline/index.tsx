@@ -1,8 +1,8 @@
 import { PopoverProps } from '@arco-design/web-react';
 import React, { useCallback, useMemo } from 'react';
-import { IconFont } from 'easy-email-editor';
+import { IconFont } from '@teamdiverst/easy-email-editor';
 import { ToolItem } from '../ToolItem';
-import { EMAIL_BLOCK_CLASS_NAME } from 'easy-email-core';
+import { EMAIL_BLOCK_CLASS_NAME } from '@teamdiverst/easy-email-core';
 import { useSelectionRange } from '@extensions/AttributePanel/hooks/useSelectionRange';
 
 export interface LinkProps extends PopoverProps {

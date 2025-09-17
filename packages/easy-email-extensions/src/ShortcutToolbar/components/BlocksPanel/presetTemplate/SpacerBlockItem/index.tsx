@@ -1,6 +1,6 @@
 import React from 'react';
-import { Stack, TextStyle } from 'easy-email-editor';
-import { AdvancedType, ISpacer, RecursivePartial } from 'easy-email-core';
+import { Stack, TextStyle } from '@teamdiverst/easy-email-editor';
+import { AdvancedType, ISpacer, RecursivePartial } from '@teamdiverst/easy-email-core';
 
 import { BlockMaskWrapper } from '@extensions/ShortcutToolbar/components/BlockMaskWrapper';
 
