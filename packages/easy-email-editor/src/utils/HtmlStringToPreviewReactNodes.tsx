@@ -1,6 +1,6 @@
 import { camelCase } from 'lodash';
 import React from 'react';
-import { getNodeTypeFromClassName } from 'easy-email-core';
+import { getNodeTypeFromClassName } from '@teamdiverst/easy-email-core';
 
 const domParser = new DOMParser();
 
