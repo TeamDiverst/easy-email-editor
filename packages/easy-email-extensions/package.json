@@ -2,7 +2,7 @@
   "name": "@TeamDiverst/easy-email-extensions",
   "license": "MIT",
   "description": "Email editor",
-  "version": "5.0.4",
+  "version": "5.0.4-beta",
   "author": "m-Ryan",
   "repository": {
     "type": "git",
@@ -95,8 +95,8 @@
     "uuid": "^9.0.1"
   },
   "peerDependencies": {
-    "@teamdiverst/easy-email-core": "^5.0.4",
-    "@teamdiverst/easy-email-editor": "^5.0.4",
+    "@teamdiverst/easy-email-core": "^5.0.4-beta",
+    "@teamdiverst/easy-email-editor": "^5.0.4-beta",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-final-form": "^6.5.7"
