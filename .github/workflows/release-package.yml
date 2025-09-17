@@ -1,0 +1,116 @@
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish-core:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+
+      - name: Setup Registry
+        env:
+          PACKAGE_AUTH_TOKEN: ${{ secrets.PACKAGE_AUTH_TOKEN }}
+        run: |
+          pnpm config set @teamdiverst:registry https://npm.pkg.github.com 
+          pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
+          pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
+
+      - name: Install dependencies
+        run: |
+          cd packages/easy-email-core
+          pnpm install
+
+      - name: Build and Publish
+        run: |
+          cd packages/easy-email-core
+          pnpm build
+          pnpm publish --no-git-checks --access=restricted --report-summary
+
+  publish-editor:
+    needs: [publish-core]
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+
+      - name: Setup Registry
+        env:
+          PACKAGE_AUTH_TOKEN: ${{ secrets.PACKAGE_AUTH_TOKEN }}
+        run: |
+          pnpm config set @teamdiverst:registry https://npm.pkg.github.com 
+          pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
+          pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
+
+      - name: Install dependencies
+        run: |
+          cd packages/easy-email-editor
+          pnpm install
+
+      - name: Build and Publish
+        run: |
+          cd packages/easy-email-editor
+          pnpm build
+          pnpm publish --no-git-checks --access=restricted --report-summary
+
+  publish-extensions:
+    needs: [publish-core, publish-editor]
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+
+      - name: Setup Registry
+        env:
+          PACKAGE_AUTH_TOKEN: ${{ secrets.PACKAGE_AUTH_TOKEN }}
+        run: |
+          pnpm config set @teamdiverst:registry https://npm.pkg.github.com 
+          pnpm config set @TeamDiverst:registry https://npm.pkg.github.com 
+          pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
+
+      - name: Install dependencies
+        run: |
+          cd packages/easy-email-extensions
+          pnpm install
+
+      - name: Build and Publish
+        run: |
+          cd packages/easy-email-extensions
+          pnpm build
+          pnpm publish --no-git-checks --access=restricted --report-summary

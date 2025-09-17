@@ -1,12 +1,12 @@
 {
-  "name": "easy-email-editor",
+  "name": "@TeamDiverst/easy-email-editor",
   "license": "MIT",
   "description": "Email editor",
-  "version": "4.16.3",
+  "version": "5.0.4",
   "author": "m-Ryan",
   "repository": {
     "type": "git",
-    "url": "git@github.com:zalify/easy-email.git"
+    "url": "git@github.com:TeamDiverst/easy-email-editor.git"
   },
   "keywords": [
     "email editor core"
@@ -69,7 +69,7 @@
     "vite": "^2.6.14"
   },
   "peerDependencies": {
-    "easy-email-core": "^4.3.6",
+    "@teamdiverst/easy-email-core": "^5.0.4",
     "mjml-browser": "^4.10.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
