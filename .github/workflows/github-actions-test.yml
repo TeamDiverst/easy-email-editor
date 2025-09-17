@@ -24,6 +24,12 @@ jobs:
           version: 8
           run_install: false
 
+      - name: Setup Registry
+        env:
+          PACKAGE_AUTH_TOKEN: ${{ secrets.PACKAGE_AUTH_TOKEN }}
+        run: pnpm config set @teamdiverst:registry https://npm.pkg.github.com && pnpm config set //npm.pkg.github.com/:_authToken $PACKAGE_AUTH_TOKEN
+
+
       - name: Install dependencies core
         run: |
           cd packages/easy-email-core && pnpm install

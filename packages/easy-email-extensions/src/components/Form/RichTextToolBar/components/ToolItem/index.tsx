@@ -16,7 +16,7 @@ export const ToolItem: React.FC<{
     return (
       <button
         tabIndex={-1}
-        className='@teamdiverst/easy-email-extensions-emailToolItem'
+        className='easy-email-extensions-emailToolItem'
         title={props.title}
         onClick={props.onClick}
         style={props.style}
@@ -32,7 +32,7 @@ content={props.title}
     >
       <button
         tabIndex={-1}
-        className={classnames('@teamdiverst/easy-email-extensions-emailToolItem', props.isActive && '@teamdiverst/easy-email-extensions-emailToolItem-active')}
+        className={classnames('easy-email-extensions-emailToolItem', props.isActive && 'easy-email-extensions-emailToolItem-active')}
         title={props.title}
         onClick={props.onClick}
         style={props.style}

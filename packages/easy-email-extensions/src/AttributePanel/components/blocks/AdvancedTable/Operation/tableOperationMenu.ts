@@ -104,7 +104,7 @@ export default class TableOperationMenu {
     this.domNode = iframeDocument?.createElement('div');
 
     if (this.domNode) {
-      this.domNode.classList.add('@teamdiverst/easy-email-table-operation-menu');
+      this.domNode.classList.add('easy-email-table-operation-menu');
       setStyle(this.domNode, { display: 'none' });
 
       for (let name in this.menuItems) {
@@ -128,7 +128,7 @@ export default class TableOperationMenu {
       const iframeDocument = getIframeDocument();
 
       const dividing = iframeDocument?.createElement('div');
-      dividing?.classList.add('@teamdiverst/easy-email-table-operation-menu-dividing');
+      dividing?.classList.add('easy-email-table-operation-menu-dividing');
 
       return dividing as HTMLDivElement;
     }
@@ -138,16 +138,16 @@ export default class TableOperationMenu {
     const iframeDocument = getIframeDocument();
 
     const node = iframeDocument?.createElement('div');
-    node?.classList.add('@teamdiverst/easy-email-table-operation-menu-item');
+    node?.classList.add('easy-email-table-operation-menu-item');
 
     const iconSpan = iframeDocument?.createElement('span');
-    iconSpan?.classList.add('@teamdiverst/easy-email-table-operation-menu-icon');
+    iconSpan?.classList.add('easy-email-table-operation-menu-icon');
     if (iconSpan) {
       iconSpan.innerHTML = icon;
     }
 
     const textSpan = iframeDocument?.createElement('span');
-    textSpan?.classList.add('@teamdiverst/easy-email-table-operation-menu-text');
+    textSpan?.classList.add('easy-email-table-operation-menu-text');
     if (textSpan) {
       textSpan.innerText = text;
     }

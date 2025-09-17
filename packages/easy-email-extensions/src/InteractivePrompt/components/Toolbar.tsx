@@ -1,6 +1,6 @@
 import React from 'react';
 import { BasicType, getParentIdx, getSiblingIdx } from '@teamdiverst/easy-email-core';
-import { useBlock, useFocusIdx, useEditorProps, isTextBlock } from '@teamdiverst/easy-email-editor';
+import { isTextBlock, useBlock, useEditorProps, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { classnames } from '@extensions/utils/classnames';
 import { useAddToCollection } from '@extensions/hooks/useAddToCollection';
 import { getBlockTitle } from '@extensions/utils/getBlockTitle';
@@ -54,7 +54,7 @@ export function Toolbar() {
   return (
     <>
       <div
-        id='@teamdiverst/easy-email-extensions-InteractivePrompt-Toolbar'
+        id='easy-email-extensions-InteractivePrompt-Toolbar'
         style={{
           height: 0,
 

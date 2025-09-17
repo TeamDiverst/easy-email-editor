@@ -1,4 +1,4 @@
-import { BlockManager,IPage, BasicType, IBlockData } from '@teamdiverst/easy-email-core';
+import { BasicType, BlockManager, IBlockData, IPage } from '@teamdiverst/easy-email-core';
 import { identity, isString, pickBy } from 'lodash';
 import { parseXMLtoBlock } from './parseXMLtoBlock';
 
@@ -148,7 +148,7 @@ export function getMetaDataFromMjml(data?: IChildrenItem): {
     ?.filter((item) => item.tagName === 'mj-html-attributes')
     .map((item) => item.children)
     .flat()
-    .filter((item) => item && item.attributes.class === '@teamdiverst/easy-email')
+    .filter((item) => item && item.attributes.class === 'easy-email')
     .reduce((obj: { [key: string]: any; }, item) => {
       if (!item) return obj;
       const name = item.attributes['attribute-name'];
