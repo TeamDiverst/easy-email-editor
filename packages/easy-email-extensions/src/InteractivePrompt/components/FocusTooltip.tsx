@@ -2,7 +2,13 @@ import React from 'react';
 
 import { BasicType } from '@teamdiverst/easy-email-core';
 import { createPortal } from 'react-dom';
-import { IconFont, useBlock, useFocusIdx, BlockAvatarWrapper, useFocusBlockLayout } from '@teamdiverst/easy-email-editor';
+import {
+  BlockAvatarWrapper,
+  IconFont,
+  useBlock,
+  useFocusBlockLayout,
+  useFocusIdx,
+} from '@teamdiverst/easy-email-editor';
 import { Toolbar } from './Toolbar';
 
 export function FocusTooltip() {
@@ -17,7 +23,7 @@ export function FocusTooltip() {
     <>
       {createPortal(
         <div
-          id='@teamdiverst/easy-email-extensions-InteractivePrompt-FocusTooltip'
+          id='easy-email-extensions-InteractivePrompt-FocusTooltip'
           style={{
             position: 'absolute',
             width: '100%',
