@@ -66,7 +66,6 @@ const getCellBackgroundSelectorRoot = (
       bgColorHandler={bgColorHandler}
       rootDom={rootDom}
     />,
-    node,
   );
   return node;
 };
