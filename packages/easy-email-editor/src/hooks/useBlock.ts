@@ -1,14 +1,14 @@
 import {
   BasicType,
-  IBlockData,
+  BlockManager,
+  createBlockDataByType,
   getIndexByIdx,
   getPageIdx,
   getParentByIdx,
   getParentIdx,
   getValueByIdx,
-  BlockManager,
-  createBlockDataByType,
-} from 'easy-email-core';
+  IBlockData,
+} from '@teamdiverst/easy-email-core';
 import { cloneDeep, debounce, get } from 'lodash';
 import { useCallback, useContext } from 'react';
 

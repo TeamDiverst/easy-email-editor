@@ -1,15 +1,15 @@
 import { get } from 'lodash';
 import {
+  AdvancedType,
+  BasicType,
   getChildIdx,
   getIndexByIdx,
+  getParentByIdx,
   getParentIdx,
   getSameParent,
-  IPage,
   IBlockData,
-  getParentByIdx,
-  BasicType,
-  AdvancedType,
-} from 'easy-email-core';
+  IPage,
+} from '@teamdiverst/easy-email-core';
 import { DirectionPosition } from './getDirectionPosition';
 
 interface Params {
