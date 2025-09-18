@@ -77,7 +77,7 @@
     "vite-plugin-style-import": "^2.0.0"
   },
   "dependencies": {
-    "@arco-design/web-react": "^2.36.1",
+    "@arco-design/web-react": "^2.66.5",
     "codemirror": "^5.65.20",
     "color": "^4.2.3",
     "final-form": "^5.0.0",
