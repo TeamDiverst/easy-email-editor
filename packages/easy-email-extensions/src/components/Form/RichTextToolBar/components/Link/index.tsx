@@ -66,7 +66,7 @@ export function Link(props: LinkProps) {
   return (
     <Form
       key={initialValues.link}
-      enableReinitialize
+      keepDirtyOnReinitialize
       initialValues={initialValues}
       onSubmit={onSubmit}
     >

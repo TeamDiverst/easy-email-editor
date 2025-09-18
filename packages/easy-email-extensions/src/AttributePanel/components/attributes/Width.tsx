@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { InputWithUnitField } from '../../../components/Form';
-import { useFocusIdx, useBlock } from '@teamdiverst/easy-email-editor';
+import { useBlock, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { BasicType, getParentByIdx } from '@teamdiverst/easy-email-core';
 import { InputWithUnitProps } from '@extensions/components/Form/InputWithUnit';
 import { UseFieldConfig } from 'react-final-form';
@@ -12,11 +12,11 @@ export function Width({
 }: {
   inline?: boolean;
   unitOptions?: InputWithUnitProps['unitOptions'];
-  config?: UseFieldConfig<any>;
+  config?: UseFieldConfig;
 }) {
   const { focusIdx } = useFocusIdx();
   const { focusBlock, values } = useBlock();
-  const parentType = getParentByIdx(values, focusIdx)?.type;
+  const parentType = getParentByIdx(values!, focusIdx)?.type;
 
   const validate = useCallback(
     (val: string): string | undefined => {
