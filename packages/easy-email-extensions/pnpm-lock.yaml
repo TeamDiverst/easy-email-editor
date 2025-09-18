@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@arco-design/web-react':
-        specifier: ^2.36.1
+        specifier: ^2.66.5
         version: 2.66.5(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@teamdiverst/easy-email-core':
         specifier: ^5.2.0
