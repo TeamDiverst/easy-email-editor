@@ -31,7 +31,7 @@ export const RecordProvider: React.FC<{ children?: React.ReactNode }> = props =>
   const indexRef = useRefState(index);
 
   const statusRef = useRef<RecordStatus>(undefined);
-  const currentData = useRef<IEmailTemplate>();
+  const currentData = useRef<IEmailTemplate>(null);
 
   if (index >= 0 && data.length > 0) {
     currentData.current = data[index];
@@ -71,18 +71,18 @@ export const RecordProvider: React.FC<{ children?: React.ReactNode }> = props =>
 
     const isChanged = !(
       currentItem &&
-      isEqual(formState.values.content, currentItem.content) &&
-      formState.values.subTitle === currentItem.subTitle &&
+      isEqual(formState.values?.content, currentItem.content) &&
+      formState.values?.subTitle === currentItem.subTitle &&
       formState.values.subTitle === currentItem.subTitle
     );
 
-    if (isChanged) {
-      currentData.current = formState.values;
+    if (isChanged && currentData.current) {
+      currentData.current = formState.values ?? null;
       statusRef.current = 'add';
       setData(oldData => {
         const list = oldData.slice(0, indexRef.current + 1);
 
-        const newData = [...list, cloneDeep(formState.values)].slice(-MAX_RECORD_SIZE);
+        const newData = [...list, cloneDeep(formState.values!)].slice(-MAX_RECORD_SIZE);
 
         return newData;
       });

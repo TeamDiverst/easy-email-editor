@@ -100,7 +100,7 @@ export function useDropBlock() {
 
         const blockNode = getBlockNodeByChildEle(ev.target as HTMLDivElement);
 
-        if (blockNode) {
+        if (blockNode && cacheValues.current) {
           const directionPosition = getDirectionPosition(ev);
           const idx = getNodeIdxFromClassName(blockNode.classList)!;
           const positionData = getInsertPosition({

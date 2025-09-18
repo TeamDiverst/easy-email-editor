@@ -1,7 +1,7 @@
 import { IEmailTemplate } from '@/typings';
-import { Form, useForm, useFormState, useField } from 'react-final-form';
+import { Form, useField, useForm, useFormState } from 'react-final-form';
 import arrayMutators from 'final-form-arrays';
-import React, { useMemo, useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { BlocksProvider } from '..//BlocksProvider';
 import { HoverIdxProvider } from '../HoverIdxProvider';
 import { PropsProvider, PropsProviderProps } from '../PropsProvider';
@@ -51,7 +51,7 @@ export const EmailEditorProvider = <T extends any>(
     <Form<IEmailTemplate>
       initialValues={initialValues}
       onSubmit={onSubmit}
-      enableReinitialize
+      keepDirtyOnReinitialize
       validate={validationSchema}
       mutators={{ ...arrayMutators, setFieldTouched: setFieldTouched as any }}
       subscription={{ submitting: true, pristine: true }}
