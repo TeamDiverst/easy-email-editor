@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo } from 'react';
 import { InputWithUnitField } from '../../../components/Form';
-import { useFocusIdx, Stack, useBlock, TextStyle, IconFont } from '@teamdiverst/easy-email-editor';
+import { IconFont, Stack, TextStyle, useBlock, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { createBlockDataByType } from '@teamdiverst/easy-email-core';
 import { Form, useFormState } from 'react-final-form';
 import { Button, Grid, Space, Tooltip } from '@arco-design/web-react';
@@ -78,7 +78,7 @@ export function Padding(props: PaddingProps = {}) {
     <Form<{ top: string; right: string; left: string; bottom: string }>
       initialValues={paddingFormValues}
       subscription={{ submitting: true, pristine: true }}
-      enableReinitialize
+      keepDirtyOnReinitialize
       onSubmit={() => {}}
     >
       {() => {
@@ -160,6 +160,7 @@ export function Padding(props: PaddingProps = {}) {
 
 const PaddingChangeWrapper: React.FC<{ onChange: (val: string) => void }> = props => {
   const {
+    // @ts-ignore
     values: { top, right, bottom, left },
   } = useFormState();
   const { onChange } = props;

@@ -19,7 +19,7 @@ export const MergeTags: React.FC<{
   const { values } = useBlock();
 
   const contextMergeTags = useMemo(
-    () => getContextMergeTags(mergeTags, values, focusIdx),
+    () => getContextMergeTags(mergeTags, values!, focusIdx),
     [mergeTags, values, focusIdx]
   );
 

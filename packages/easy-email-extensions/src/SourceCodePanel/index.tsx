@@ -9,9 +9,9 @@ import {
 } from '@teamdiverst/easy-email-core';
 import {
   useBlock,
-  useFocusIdx,
   useEditorContext,
   useEditorProps,
+  useFocusIdx,
 } from '@teamdiverst/easy-email-editor';
 import { cloneDeep } from 'lodash';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
@@ -66,7 +66,7 @@ export function SourceCodePanel({ jsonReadOnly, mjmlReadOnly }: { jsonReadOnly: 
         try {
           const parseValue = MjmlToJson(event.target.value);
           if (parseValue.type !== BasicType.PAGE) {
-            const parentBlock = getParentByIdx(values, focusIdx)!;
+            const parentBlock = getParentByIdx(values!, focusIdx)!;
             const parseBlock = BlockManager.getBlockByType(parseValue.type);
 
             if (!parseBlock?.validParentType.includes(parentBlock?.type)) {
