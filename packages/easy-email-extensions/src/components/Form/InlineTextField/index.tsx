@@ -68,5 +68,9 @@ function getContentEditableType(element: HTMLElement): string {
     return type;
   }
 
-  return getContentEditableType(element.parentElement);
+  if (element.parentElement) {
+    return getContentEditableType(element.parentElement);
+  }
+
+  return '';
 }
