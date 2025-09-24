@@ -4,10 +4,10 @@ import {
   DATA_CONTENT_EDITABLE_IDX,
   DATA_CONTENT_EDITABLE_TYPE,
   FIXED_CONTAINER_ID,
+  getIframeDocument,
   MergeTagBadge,
   RICH_TEXT_BAR_ID,
   useEditorProps,
-  getIframeDocument
 } from '@teamdiverst/easy-email-editor';
 import React, { useCallback, useEffect, useState } from 'react';
 import { InlineText, InlineTextProps } from '../InlineTextField';
@@ -101,6 +101,8 @@ function FieldWrapper(
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceCallbackChange = useCallback(
     debounce((val) => {
+       val = val.replaceAll('&nbsp;', '&emsp;')
+
       if (enabledMergeTagsBadge) {
         input.onChange(MergeTagBadge.revert(val, mergeTagGenerate));
       } else {
