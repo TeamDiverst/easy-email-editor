@@ -7,7 +7,7 @@ export const common = {
   async uploadByQiniu(file: File | Blob): Promise<string> {
     const data = new FormData();
     data.append('file', file);
-    data.append('upload_preset', 'easy-email-test');
+    data.append('upload_preset', '@teamdiverst/easy-email-test');
 
     const res = await axios.post<{ url: string }>(CLOUDINARY_URL, data);
     return res.data.url;

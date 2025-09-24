@@ -1,6 +1,6 @@
 import { uniqueId } from 'lodash';
 import { PromiseEach } from './PromiseEach';
-import { getIframeDocument } from 'easy-email-editor';
+import { getIframeDocument } from '@teamdiverst/easy-email-editor';
 
 interface Options {
   limit?: number;

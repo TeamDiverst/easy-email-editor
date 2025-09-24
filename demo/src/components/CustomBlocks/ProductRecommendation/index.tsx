@@ -1,12 +1,12 @@
 import {
-  IBlockData,
+  AdvancedType,
   BasicType,
   components,
   createCustomBlock,
   getPreviewClassName,
-  AdvancedType,
+  IBlockData,
   mergeBlock,
-} from 'easy-email-core';
+} from '@teamdiverst/easy-email-core';
 
 import { CustomBlocksType } from '../constants';
 import React from 'react';

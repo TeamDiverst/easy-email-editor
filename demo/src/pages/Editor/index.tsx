@@ -12,18 +12,18 @@ import { Loading } from '@demo/components/loading';
 import mjml from 'mjml-browser';
 import services from '@demo/services';
 import { saveAs } from 'file-saver';
-import { EmailEditor, EmailEditorProvider, IEmailTemplate } from 'easy-email-editor';
+import { EmailEditor, EmailEditorProvider, IEmailTemplate } from '@teamdiverst/easy-email-editor';
 
 import { Stack } from '@demo/components/Stack';
 import { pushEvent } from '@demo/utils/pushEvent';
 import { UserStorage } from '@demo/utils/user-storage';
 
-import { AdvancedType, IBlockData, JsonToMjml } from 'easy-email-core';
-import { ExtensionProps, StandardLayout } from 'easy-email-extensions';
+import { AdvancedType, IBlockData, JsonToMjml } from '@teamdiverst/easy-email-core';
+import { ExtensionProps, StandardLayout } from '@teamdiverst/easy-email-extensions';
 import { AutoSaveAndRestoreEmail } from '@demo/components/AutoSaveAndRestoreEmail';
 
-import 'easy-email-editor/lib/style.css';
-import 'easy-email-extensions/lib/style.css';
+import '@teamdiverst/easy-email-editor/lib/style.css';
+import '@teamdiverst/easy-email-extensions/lib/style.css';
 import blueTheme from '@arco-themes/react-easy-email-theme/css/arco.css?inline';
 
 import { Uploader } from '@demo/utils/Uploader';
@@ -138,7 +138,7 @@ export default function Editor() {
 
     pushEvent({ event: 'MJMLExport', payload: { values } });
     navigator.clipboard.writeText(mjmlString);
-    saveAs(new Blob([mjmlString], { type: 'text/mjml' }), 'easy-email.mjml');
+    saveAs(new Blob([mjmlString], { type: 'text/mjml' }), '@teamdiverst/easy-email.mjml');
   };
 
   const onExportHTML = (values: IEmailTemplate) => {
@@ -152,14 +152,14 @@ export default function Editor() {
 
     pushEvent({ event: 'HTMLExport', payload: { values } });
     navigator.clipboard.writeText(html);
-    saveAs(new Blob([html], { type: 'text/html' }), 'easy-email.html');
+    saveAs(new Blob([html], { type: 'text/html' }), '@teamdiverst/easy-email.html');
   };
 
   const onExportJSON = (values: IEmailTemplate) => {
     navigator.clipboard.writeText(JSON.stringify(values, null, 2));
     saveAs(
       new Blob([JSON.stringify(values, null, 2)], { type: 'application/json' }),
-      'easy-email.json',
+      '@teamdiverst/easy-email.json',
     );
   };
 

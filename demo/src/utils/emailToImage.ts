@@ -1,4 +1,4 @@
-import { JsonToMjml, IBlockData } from 'easy-email-core';
+import { IBlockData, JsonToMjml } from '@teamdiverst/easy-email-core';
 import services from '@demo/services';
 
 export async function emailToImage(content: IBlockData) {
