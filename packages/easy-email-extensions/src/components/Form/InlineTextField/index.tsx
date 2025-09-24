@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import {
   ContentEditableType,
-  getIframeDocument,
   DATA_CONTENT_EDITABLE_TYPE,
+  getIframeDocument,
 } from '@teamdiverst/easy-email-editor';
 import { useField, useForm } from 'react-final-form';
 
@@ -25,32 +25,28 @@ export function InlineText({ idx, onChange, children }: InlineTextProps) {
     const onPaste = (e: ClipboardEvent) => {
       const target = e.target as HTMLElement;
 
-      if (target.getAttribute('contenteditable')) {
+      const contentEditableType = getContentEditableType(target);
 
-        e.preventDefault();
+      e.preventDefault();
 
-        const text = e.clipboardData?.getData('text/plain') ?? '';
-        iframeDocument?.execCommand('insertHTML', false, text);
-        const contentEditableType = target.getAttribute(DATA_CONTENT_EDITABLE_TYPE);
-        if (contentEditableType === ContentEditableType.RichText) {
-          onChange(target.innerHTML || '');
-        } else if (contentEditableType === ContentEditableType.Text) {
-          onChange(target.textContent?.trim() ?? '');
-        }
+      const text = e.clipboardData?.getData('text/plain') ?? '';
+      iframeDocument?.execCommand('insertHTML', false, text);
+      if (contentEditableType === ContentEditableType.RichText) {
+        onChange(target.innerHTML || '');
+      } else if (contentEditableType === ContentEditableType.Text) {
+        onChange(target.textContent?.trim() ?? '');
       }
     };
 
     const onInput = (e: Event) => {
       const target = e.target as HTMLElement;
 
-      if (target.getAttribute('contenteditable')) {
+      const contentEditableType = getContentEditableType(target)
 
-        const contentEditableType = target.getAttribute(DATA_CONTENT_EDITABLE_TYPE);
-        if (contentEditableType === ContentEditableType.RichText) {
-          onChange(target.innerHTML || '');
-        } else if (contentEditableType === ContentEditableType.Text) {
-          onChange(target.textContent?.trim() ?? '');
-        }
+      if (contentEditableType === ContentEditableType.RichText) {
+        onChange(target.innerHTML || '');
+      } else if (contentEditableType === ContentEditableType.Text) {
+        onChange(target.textContent?.trim() ?? '');
       }
     };
 
@@ -64,4 +60,13 @@ export function InlineText({ idx, onChange, children }: InlineTextProps) {
   }, [onChange, setFieldTouched]);
 
   return <>{children}</>;
+}
+
+function getContentEditableType(element: HTMLElement): string {
+  const type = element.getAttribute(DATA_CONTENT_EDITABLE_TYPE);
+  if (type) {
+    return type;
+  }
+
+  return getContentEditableType(element.parentElement);
 }
