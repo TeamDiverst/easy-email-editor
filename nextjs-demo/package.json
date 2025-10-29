@@ -45,7 +45,7 @@
     "lodash": "^4.17.21",
     "mjml-browser": "^4.14.1",
     "next": "12.1.4",
-    "next-auth": "4.3.1",
+    "next-auth": "4.24.12",
     "next-prisma-plugin-webpack5": "0.0.0-dripip",
     "next-with-less": "^3.0.1",
     "passport-google-oauth20": "^2.0.0",
