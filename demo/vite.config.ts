@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
-import path from 'path';
+import * as path from 'path';
 import { injectHtml } from 'vite-plugin-html';
 
 export default defineConfig({

@@ -36,9 +36,9 @@ export function EditPanel({
       <Tabs
         defaultActiveTab='2'
         style={{ width: '100%', padding: 0 }}
-        renderTabHeader={(_, DefaultHeader) => (
+        renderTabTitle={(DefaultHeader, _) => (
           <div className={styles.largeTabsHeader}>
-            <DefaultHeader />
+            {DefaultHeader}
           </div>
         )}
       >

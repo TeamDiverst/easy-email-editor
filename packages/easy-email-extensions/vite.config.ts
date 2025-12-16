@@ -1,5 +1,6 @@
+
 import { defineConfig } from 'vite';
-import path from 'path';
+import * as path from 'path';
 import visualizer from 'rollup-plugin-visualizer';
 
 export default defineConfig({

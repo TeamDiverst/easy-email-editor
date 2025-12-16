@@ -9,20 +9,20 @@ importers:
   .:
     dependencies:
       '@arco-design/web-react':
-        specifier: ^2.36.1
-        version: 2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+        specifier: ^2.66.8
+        version: 2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@arco-themes/react-easy-email-theme':
         specifier: ^0.0.3
-        version: 0.0.3(@arco-design/web-react@2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))
+        version: 0.0.3(@arco-design/web-react@2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       '@arco-themes/react-easy-email-theme-green':
         specifier: ^0.0.1
-        version: 0.0.1(@arco-design/web-react@2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))
+        version: 0.0.1(@arco-design/web-react@2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       '@arco-themes/react-easy-email-theme-purple':
         specifier: ^0.0.3
-        version: 0.0.3(@arco-design/web-react@2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))
+        version: 0.0.3(@arco-design/web-react@2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       '@reduxjs/toolkit':
         specifier: ^1.6.2
-        version: 1.9.7(react-redux@7.2.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(redux@4.2.1))(react@17.0.2)
+        version: 1.9.7(react-redux@7.2.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(redux@4.2.1))(react@19.2.3)
       '@sendgrid/mail':
         specifier: ^7.7.0
         version: 7.7.0
@@ -87,26 +87,26 @@ importers:
         specifier: ^6.10.1
         version: 6.14.0
       react:
-        specifier: 17.0.2
-        version: 17.0.2
+        specifier: 19.2.3
+        version: 19.2.3
       react-color:
         specifier: ^2.19.3
-        version: 2.19.3(react@17.0.2)
+        version: 2.19.3(react@19.2.3)
       react-dom:
-        specifier: 17.0.2
-        version: 17.0.2(react@17.0.2)
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
       react-final-form:
         specifier: ^6.5.7
-        version: 6.5.9(final-form@4.20.10)(react@17.0.2)
+        version: 6.5.9(final-form@4.20.10)(react@19.2.3)
       react-redux:
         specifier: 7.2.2
-        version: 7.2.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(redux@4.2.1)
+        version: 7.2.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(redux@4.2.1)
       react-router-dom:
         specifier: ^5.3.3
-        version: 5.3.4(react@17.0.2)
+        version: 5.3.4(react@19.2.3)
       react-use:
         specifier: ^17.3.1
-        version: 17.6.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+        version: 17.6.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       redux:
         specifier: ^4.1.2
         version: 4.2.1
@@ -123,6 +123,9 @@ importers:
       '@types/node':
         specifier: ^17.0.21
         version: 17.0.45
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.1.13)
       '@vitejs/plugin-react-refresh':
         specifier: ^1.3.6
         version: 1.3.6
@@ -156,8 +159,8 @@ packages:
   '@arco-design/color@0.4.0':
     resolution: {integrity: sha512-s7p9MSwJgHeL8DwcATaXvWT3m2SigKpxx4JA1BGPHL4gfvaQsmQfrLBDpjOJFJuJ2jG2dMt3R3P8Pm9E65q18g==}
 
-  '@arco-design/web-react@2.66.5':
-    resolution: {integrity: sha512-ity0kG+B6pmuJ2/Zh3wUtBV78XxWmRtGEwazL8f4KAjoQpMkisgLMXibUpAGfcqph3vycNFq4yHgHujjgwrJMQ==}
+  '@arco-design/web-react@2.66.8':
+    resolution: {integrity: sha512-V2XDTqeSFq4g6Yk0tSEFO4SMPZ04cGNF6dKfFBM9drEpmj91cU1n9+rd3gmmtcJ2f3SOqbr0itnUsqBWGQ4PvQ==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -482,6 +485,11 @@ packages:
 
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+
+  '@types/react-dom@19.2.3':
+    resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
+    peerDependencies:
+      '@types/react': ^19.2.0
 
   '@types/react-router-dom@5.3.3':
     resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
@@ -1251,10 +1259,10 @@ packages:
     peerDependencies:
       react: '*'
 
-  react-dom@17.0.2:
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
+  react-dom@19.2.3:
+    resolution: {integrity: sha512-yELu4WmLPw5Mr/lmeEpox5rw3RETacE++JgHqQzd2dg+YbJuat3jH4ingc+WPZhxaoFzdv9y33G+F7Nl5O0GBg==}
     peerDependencies:
-      react: 17.0.2
+      react: ^19.2.3
 
   react-final-form@6.5.9:
     resolution: {integrity: sha512-x3XYvozolECp3nIjly+4QqxdjSSWfcnpGEL5K8OBT6xmGrq5kBqbA6+/tOqoom9NwqIPPbxPNsOViFlbKgowbA==}
@@ -1322,8 +1330,8 @@ packages:
       react: '*'
       react-dom: '*'
 
-  react@17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
+  react@19.2.3:
+    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
     engines: {node: '>=0.10.0'}
 
   reactcss@1.2.3:
@@ -1385,8 +1393,8 @@ packages:
   sax@1.4.1:
     resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
 
-  scheduler@0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
+  scheduler@0.27.0:
+    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
   screenfull@5.2.0:
     resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
@@ -1643,7 +1651,7 @@ snapshots:
     dependencies:
       color: 3.2.1
 
-  '@arco-design/web-react@2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
+  '@arco-design/web-react@2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@arco-design/color': 0.4.0
       '@babel/runtime': 7.28.4
@@ -1653,28 +1661,28 @@ snapshots:
       dayjs: 1.11.18
       lodash: 4.17.21
       number-precision: 1.6.0
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-      react-focus-lock: 2.13.6(@types/react@19.1.13)(react@17.0.2)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      react-focus-lock: 2.13.6(@types/react@19.1.13)(react@19.2.3)
       react-is: 18.3.1
-      react-transition-group: 4.4.5(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      react-transition-group: 4.4.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       resize-observer-polyfill: 1.5.1
       scroll-into-view-if-needed: 2.2.31
       shallowequal: 1.1.0
     transitivePeerDependencies:
       - '@types/react'
 
-  '@arco-themes/react-easy-email-theme-green@0.0.1(@arco-design/web-react@2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))':
+  '@arco-themes/react-easy-email-theme-green@0.0.1(@arco-design/web-react@2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))':
     dependencies:
-      '@arco-design/web-react': 2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      '@arco-design/web-react': 2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
 
-  '@arco-themes/react-easy-email-theme-purple@0.0.3(@arco-design/web-react@2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))':
+  '@arco-themes/react-easy-email-theme-purple@0.0.3(@arco-design/web-react@2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))':
     dependencies:
-      '@arco-design/web-react': 2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      '@arco-design/web-react': 2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
 
-  '@arco-themes/react-easy-email-theme@0.0.3(@arco-design/web-react@2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))':
+  '@arco-themes/react-easy-email-theme@0.0.3(@arco-design/web-react@2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))':
     dependencies:
-      '@arco-design/web-react': 2.66.5(@types/react@19.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      '@arco-design/web-react': 2.66.8(@types/react@19.1.13)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
 
   '@babel/code-frame@7.27.1':
     dependencies:
@@ -1797,9 +1805,9 @@ snapshots:
   '@esbuild/linux-loong64@0.14.54':
     optional: true
 
-  '@icons/material@0.2.4(react@17.0.2)':
+  '@icons/material@0.2.4(react@19.2.3)':
     dependencies:
-      react: 17.0.2
+      react: 19.2.3
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -1893,15 +1901,15 @@ snapshots:
 
   '@posthog/core@1.2.1': {}
 
-  '@reduxjs/toolkit@1.9.7(react-redux@7.2.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(redux@4.2.1))(react@17.0.2)':
+  '@reduxjs/toolkit@1.9.7(react-redux@7.2.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(redux@4.2.1))(react@19.2.3)':
     dependencies:
       immer: 9.0.21
       redux: 4.2.1
       redux-thunk: 2.4.2(redux@4.2.1)
       reselect: 4.1.8
     optionalDependencies:
-      react: 17.0.2
-      react-redux: 7.2.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(redux@4.2.1)
+      react: 19.2.3
+      react-redux: 7.2.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(redux@4.2.1)
 
   '@rollup/pluginutils@4.2.1':
     dependencies:
@@ -2006,6 +2014,10 @@ snapshots:
   '@types/mustache@4.2.6': {}
 
   '@types/node@17.0.45': {}
+
+  '@types/react-dom@19.2.3(@types/react@19.1.13)':
+    dependencies:
+      '@types/react': 19.1.13
 
   '@types/react-router-dom@5.3.3':
     dependencies:
@@ -2627,15 +2639,15 @@ snapshots:
 
   mustache@4.2.0: {}
 
-  nano-css@5.6.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
+  nano-css@5.6.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
       css-tree: 1.1.3
       csstype: 3.1.3
       fastest-stable-stringify: 2.0.2
       inline-style-prefixer: 7.0.1
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
       rtl-css-js: 1.16.1
       stacktrace-js: 2.0.2
       stylis: 4.3.6
@@ -2735,44 +2747,42 @@ snapshots:
     dependencies:
       side-channel: 1.1.0
 
-  react-clientside-effect@1.2.8(react@17.0.2):
+  react-clientside-effect@1.2.8(react@19.2.3):
     dependencies:
       '@babel/runtime': 7.28.4
-      react: 17.0.2
+      react: 19.2.3
 
-  react-color@2.19.3(react@17.0.2):
+  react-color@2.19.3(react@19.2.3):
     dependencies:
-      '@icons/material': 0.2.4(react@17.0.2)
+      '@icons/material': 0.2.4(react@19.2.3)
       lodash: 4.17.21
       lodash-es: 4.17.21
       material-colors: 1.2.6
       prop-types: 15.8.1
-      react: 17.0.2
-      reactcss: 1.2.3(react@17.0.2)
+      react: 19.2.3
+      reactcss: 1.2.3(react@19.2.3)
       tinycolor2: 1.6.0
 
-  react-dom@17.0.2(react@17.0.2):
+  react-dom@19.2.3(react@19.2.3):
     dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
+      react: 19.2.3
+      scheduler: 0.27.0
 
-  react-final-form@6.5.9(final-form@4.20.10)(react@17.0.2):
+  react-final-form@6.5.9(final-form@4.20.10)(react@19.2.3):
     dependencies:
       '@babel/runtime': 7.28.4
       final-form: 4.20.10
-      react: 17.0.2
+      react: 19.2.3
 
-  react-focus-lock@2.13.6(@types/react@19.1.13)(react@17.0.2):
+  react-focus-lock@2.13.6(@types/react@19.1.13)(react@19.2.3):
     dependencies:
       '@babel/runtime': 7.28.4
       focus-lock: 1.3.6
       prop-types: 15.8.1
-      react: 17.0.2
-      react-clientside-effect: 1.2.8(react@17.0.2)
-      use-callback-ref: 1.3.3(@types/react@19.1.13)(react@17.0.2)
-      use-sidecar: 1.1.3(@types/react@19.1.13)(react@17.0.2)
+      react: 19.2.3
+      react-clientside-effect: 1.2.8(react@19.2.3)
+      use-callback-ref: 1.3.3(@types/react@19.1.13)(react@19.2.3)
+      use-sidecar: 1.1.3(@types/react@19.1.13)(react@19.2.3)
     optionalDependencies:
       '@types/react': 19.1.13
 
@@ -2780,32 +2790,32 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-redux@7.2.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(redux@4.2.1):
+  react-redux@7.2.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(redux@4.2.1):
     dependencies:
       '@babel/runtime': 7.28.4
       hoist-non-react-statics: 3.3.2
       loose-envify: 1.4.0
       prop-types: 15.8.1
-      react: 17.0.2
+      react: 19.2.3
       react-is: 16.13.1
       redux: 4.2.1
     optionalDependencies:
-      react-dom: 17.0.2(react@17.0.2)
+      react-dom: 19.2.3(react@19.2.3)
 
   react-refresh@0.10.0: {}
 
-  react-router-dom@5.3.4(react@17.0.2):
+  react-router-dom@5.3.4(react@19.2.3):
     dependencies:
       '@babel/runtime': 7.28.4
       history: 4.10.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
-      react: 17.0.2
-      react-router: 5.3.4(react@17.0.2)
+      react: 19.2.3
+      react-router: 5.3.4(react@19.2.3)
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  react-router@5.3.4(react@17.0.2):
+  react-router@5.3.4(react@19.2.3):
     dependencies:
       '@babel/runtime': 7.28.4
       history: 4.10.1
@@ -2813,26 +2823,26 @@ snapshots:
       loose-envify: 1.4.0
       path-to-regexp: 1.9.0
       prop-types: 15.8.1
-      react: 17.0.2
+      react: 19.2.3
       react-is: 16.13.1
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  react-transition-group@4.4.5(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
+  react-transition-group@4.4.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@babel/runtime': 7.28.4
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
-  react-universal-interface@0.6.2(react@17.0.2)(tslib@2.8.1):
+  react-universal-interface@0.6.2(react@19.2.3)(tslib@2.8.1):
     dependencies:
-      react: 17.0.2
+      react: 19.2.3
       tslib: 2.8.1
 
-  react-use@17.6.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
+  react-use@17.6.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@types/js-cookie': 2.2.7
       '@xobotyi/scrollbar-width': 1.9.5
@@ -2840,10 +2850,10 @@ snapshots:
       fast-deep-equal: 3.1.3
       fast-shallow-equal: 1.0.0
       js-cookie: 2.2.1
-      nano-css: 5.6.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-      react-universal-interface: 0.6.2(react@17.0.2)(tslib@2.8.1)
+      nano-css: 5.6.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      react-universal-interface: 0.6.2(react@19.2.3)(tslib@2.8.1)
       resize-observer-polyfill: 1.5.1
       screenfull: 5.2.0
       set-harmonic-interval: 1.0.1
@@ -2851,15 +2861,12 @@ snapshots:
       ts-easing: 0.2.0
       tslib: 2.8.1
 
-  react@17.0.2:
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
+  react@19.2.3: {}
 
-  reactcss@1.2.3(react@17.0.2):
+  reactcss@1.2.3(react@19.2.3):
     dependencies:
       lodash: 4.17.21
-      react: 17.0.2
+      react: 19.2.3
 
   readdirp@4.1.2: {}
 
@@ -2911,10 +2918,7 @@ snapshots:
   sax@1.4.1:
     optional: true
 
-  scheduler@0.20.2:
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
+  scheduler@0.27.0: {}
 
   screenfull@5.2.0: {}
 
@@ -3082,17 +3086,17 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  use-callback-ref@1.3.3(@types/react@19.1.13)(react@17.0.2):
+  use-callback-ref@1.3.3(@types/react@19.1.13)(react@19.2.3):
     dependencies:
-      react: 17.0.2
+      react: 19.2.3
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.1.13
 
-  use-sidecar@1.1.3(@types/react@19.1.13)(react@17.0.2):
+  use-sidecar@1.1.3(@types/react@19.1.13)(react@19.2.3):
     dependencies:
       detect-node-es: 1.1.0
-      react: 17.0.2
+      react: 19.2.3
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.1.13

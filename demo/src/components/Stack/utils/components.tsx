@@ -1,4 +1,4 @@
-import React, { Children, isValidElement } from 'react';
+import React, { Children, isValidElement, ReactElement } from 'react';
 
 // Wraps `element` in `Component`, if it is not already an instance of
 // `Component`. If `props` is passed, those will be added as props on the
@@ -77,7 +77,7 @@ export function ConditionalWrapper({
   condition,
   wrapper,
   children,
-}: ConditionalWrapperProps): JSX.Element {
+}: ConditionalWrapperProps): ReactElement {
   return condition ? wrapper(children) : children;
 }
 
@@ -89,7 +89,7 @@ interface ConditionalRenderProps {
 export function ConditionalRender({
   condition,
   children,
-}: ConditionalRenderProps): JSX.Element {
+}: ConditionalRenderProps): ReactElement {
   return condition ? children : null;
 }
 
