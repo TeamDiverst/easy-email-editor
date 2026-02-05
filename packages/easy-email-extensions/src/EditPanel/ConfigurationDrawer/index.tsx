@@ -1,5 +1,5 @@
 import { useFocusIdx } from '@teamdiverst/easy-email-editor';
-import { Drawer } from '@arco-design/web-react';
+import { Drawer } from '@extensions/components/MuiAdapter';
 import { ConfigurationPanel } from '@extensions/ConfigurationPanel';
 import React, { useCallback, useMemo, useRef } from 'react';
 

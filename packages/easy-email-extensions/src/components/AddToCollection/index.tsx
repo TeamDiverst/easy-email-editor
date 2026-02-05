@@ -1,4 +1,4 @@
-import { Modal } from '@arco-design/web-react';
+import { Modal } from '@extensions/components/MuiAdapter';
 import { Stack, useBlock, useEditorProps } from '@teamdiverst/easy-email-editor';
 import React from 'react';
 import { Form } from 'react-final-form';

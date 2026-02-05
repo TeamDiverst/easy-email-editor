@@ -1,5 +1,5 @@
-import { Card, Space, TabsProps, Typography } from '@arco-design/web-react';
-import { IconClose, IconPlus } from '@arco-design/web-react/icon';
+import { Card, Space, TabsProps, Typography } from '@extensions/components/MuiAdapter';
+import { IconClose, IconPlus } from '@extensions/components/MuiAdapterIcons';
 import { cloneDeep } from 'lodash';
 import React from 'react';
 

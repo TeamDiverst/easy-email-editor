@@ -1,4 +1,4 @@
-import { IconEye, IconEyeInvisible } from '@arco-design/web-react/icon';
+import { IconEye, IconEyeInvisible } from '@extensions/components/MuiAdapterIcons';
 import React, { useCallback } from 'react';
 import { Stack, TextStyle, useBlock } from '@teamdiverst/easy-email-editor';
 import { BasicType, BlockManager } from '@teamdiverst/easy-email-core';

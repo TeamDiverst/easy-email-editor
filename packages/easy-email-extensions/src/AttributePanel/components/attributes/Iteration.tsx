@@ -1,5 +1,5 @@
 import { useBlock, useFocusIdx } from '@teamdiverst/easy-email-editor';
-import { Collapse, Grid, Switch } from '@arco-design/web-react';
+import { Collapse, Grid, Switch } from '@extensions/components/MuiAdapter';
 import { AdvancedBlock, AdvancedType } from '@teamdiverst/easy-email-core';
 import { TextField } from '@extensions/components/Form';
 import React, { useCallback } from 'react';

@@ -1,4 +1,4 @@
-import { PopoverProps } from '@arco-design/web-react';
+import { PopoverProps } from '@extensions/components/MuiAdapter';
 import React, { useCallback, useMemo } from 'react';
 import { IconFont } from '@teamdiverst/easy-email-editor';
 import { ToolItem } from '../ToolItem';

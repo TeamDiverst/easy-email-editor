@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { Tree, TreeSelect } from '@arco-design/web-react';
+import { Tree, TreeSelect } from '@extensions/components/MuiAdapter';
 import { get, isObject } from 'lodash';
 import { useBlock, useEditorProps, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { getContextMergeTags } from '@extensions/utils/getContextMergeTags';

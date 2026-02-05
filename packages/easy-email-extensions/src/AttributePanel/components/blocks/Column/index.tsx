@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Collapse, Grid, Space } from '@arco-design/web-react';
+import { Collapse, Grid, Space } from '@extensions/components/MuiAdapter';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { Padding } from '@extensions/AttributePanel/components/attributes/Padding';
 import { Width } from '@extensions/AttributePanel/components/attributes/Width';

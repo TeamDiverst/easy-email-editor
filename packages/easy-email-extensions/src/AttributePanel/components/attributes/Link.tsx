@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { getIframeDocument, IconFont, useFocusIdx } from '@teamdiverst/easy-email-editor';
-import { IconLink } from '@arco-design/web-react/icon';
+import { IconLink } from '@extensions/components/MuiAdapterIcons';
 import { SelectField, TextField } from '../../../components/Form';
-import { Button as ArcoButton, Grid, Popover, Space } from '@arco-design/web-react';
+import { Button as ArcoButton, Grid, Popover, Space } from '@extensions/components/MuiAdapter';
 import { MergeTags } from './MergeTags';
 import { useField } from 'react-final-form';
 

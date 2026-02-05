@@ -1,9 +1,7 @@
-import { Tabs, TabsProps } from '@arco-design/web-react';
+import { Tabs, TabsProps } from '@extensions/components/MuiAdapter';
 import { classnames } from '@extensions/utils/classnames';
 import React, { useState } from 'react';
 import styles from './index.module.scss';
-
-const { TabPane } = Tabs;
 
 export interface EditTabProps<T extends any = any>
   extends Omit<TabsProps, 'onChange'> {
@@ -34,25 +32,20 @@ export function EditTab<T extends any = any>(props: EditTabProps<T>) {
 
   return (
     <Tabs
-      destroyOnHide
       className={classnames(styles.editTab)}
       style={{ border: 'none' }}
-      type='card'
       activeTab={activeTab}
       tabPosition={props.tabPosition}
-      editable
-      onAddTab={onAddTab}
-      onDeleteTab={onDeleteTab}
       onChange={setActiveTab}
     >
       {(Array.isArray(value) ? value : []).map((item, index) => (
-        <TabPane
+        <Tabs.TabPane
           style={{ paddingLeft: 12 }}
           title={`${props.label || t('Tab')} ${index + 1}`}
           key={index}
         >
           {props.renderItem(item, index)}
-        </TabPane>
+        </Tabs.TabPane>
       ))}
     </Tabs>
   );

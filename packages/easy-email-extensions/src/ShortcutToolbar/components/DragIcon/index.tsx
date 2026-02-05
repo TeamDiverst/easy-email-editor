@@ -1,5 +1,5 @@
 import { IconFont, BlockAvatarWrapper } from '@teamdiverst/easy-email-editor';
-import { Button } from '@arco-design/web-react';
+import { Button } from '@extensions/components/MuiAdapter';
 import { getIconNameByBlockType } from '@extensions';
 import React from 'react';
 import { BlockManager, IBlockData, RecursivePartial } from '@teamdiverst/easy-email-core';

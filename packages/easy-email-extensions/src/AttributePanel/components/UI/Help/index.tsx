@@ -1,6 +1,6 @@
 import React from 'react';
-import { Tooltip, TooltipProps } from '@arco-design/web-react';
-import { IconQuestionCircle } from '@arco-design/web-react/icon';
+import { Tooltip, TooltipProps } from '@extensions/components/MuiAdapter';
+import { IconQuestionCircle } from '@extensions/components/MuiAdapterIcons';
 
 export function Help(
   props: TooltipProps &

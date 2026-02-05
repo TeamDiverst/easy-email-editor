@@ -1,4 +1,4 @@
-import { Collapse, Input, Message } from '@arco-design/web-react';
+import { Collapse, Message, TextField as Input } from '@extensions/components/MuiAdapter';
 import {
   BasicType,
   BlockManager,
@@ -9,9 +9,9 @@ import {
 } from '@teamdiverst/easy-email-core';
 import {
   useBlock,
-  useFocusIdx,
   useEditorContext,
   useEditorProps,
+  useFocusIdx,
 } from '@teamdiverst/easy-email-editor';
 import { cloneDeep } from 'lodash';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
@@ -111,13 +111,15 @@ export function SourceCodePanel({ jsonReadOnly, mjmlReadOnly }: { jsonReadOnly: 
         header={t('Json source')}
         contentStyle={{ padding: '8px 13px' }}
       >
-        <Input.TextArea
+        <Input
           key={code}
           defaultValue={code}
-          autoSize={{ maxRows: 25 }}
+          multiline
+          maxRows={25}
           onBlur={onChangeCode}
-          readOnly={jsonReadOnly}
+          slotProps={{ htmlInput: { readOnly: jsonReadOnly } }}
           className={styles.customTextArea}
+          fullWidth
         />
       </Collapse.Item>
       <Collapse.Item
@@ -125,14 +127,16 @@ export function SourceCodePanel({ jsonReadOnly, mjmlReadOnly }: { jsonReadOnly: 
         header={t('MJML source')}
         contentStyle={{ padding: '8px 13px' }}
       >
-        <Input.TextArea
+        <Input
           key={code}
           value={mjmlText}
-          autoSize={{ maxRows: 25 }}
-          onChange={onChangeMjmlText}
+          multiline
+          maxRows={25}
+          onChange={(e) => onChangeMjmlText(e.target.value)}
           onBlur={onMjmlChange}
-          readOnly={mjmlReadOnly}
+          slotProps={{ htmlInput: { readOnly: mjmlReadOnly } }}
           className={styles.customTextArea}
+          fullWidth
         />
       </Collapse.Item>
     </Collapse>

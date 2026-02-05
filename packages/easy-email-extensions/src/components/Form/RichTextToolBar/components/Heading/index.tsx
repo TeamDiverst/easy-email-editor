@@ -1,4 +1,4 @@
-import { Menu } from '@arco-design/web-react';
+import { Menu } from '@extensions/components/MuiAdapter';
 import React from 'react';
 
 export function Heading(props: { onChange: (val: string) => void }) {

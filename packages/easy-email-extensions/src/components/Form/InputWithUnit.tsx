@@ -1,4 +1,4 @@
-import { InputProps as ArcoInputProps } from '@arco-design/web-react';
+import { InputProps as ArcoInputProps } from '@extensions/components/MuiAdapter';
 import React from 'react';
 import { Input } from './Input';
 

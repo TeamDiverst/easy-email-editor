@@ -14,7 +14,7 @@ import { FontFamily } from '../../attributes/FontFamily';
 import { TextDecoration } from '../../attributes/TextDecoration';
 import { LineHeight } from '../../attributes/LineHeight';
 import { LetterSpacing } from '../../attributes/LetterSpacing';
-import { Collapse, Grid, Popover, Space, Button as ArcoButton } from '@arco-design/web-react';
+import { Collapse, Grid, Popover, Space, Button as ArcoButton } from '@extensions/components/MuiAdapter';
 import { TextField } from '../../../../components/Form';
 import { IconFont, useEditorProps, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { AttributesPanelWrapper } from '../../attributes/AttributesPanelWrapper';

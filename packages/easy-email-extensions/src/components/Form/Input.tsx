@@ -1,7 +1,7 @@
-import { Input as ArcoInput, InputProps as ArcoInputProps } from '@arco-design/web-react';
+import { TextField as MuiInput, TextFieldProps as MuiInputProps } from '@extensions/components/MuiAdapter';
 import React, { useCallback } from 'react';
 
-export interface InputProps extends Omit<ArcoInputProps, 'onChange'> {
+export interface InputProps extends Omit<MuiInputProps, 'onChange' | 'value'> {
   quickchange?: boolean;
   value: string;
   onChange: (val: string) => void;
@@ -13,6 +13,7 @@ export function Input(props: InputProps) {
     value = '',
     onKeyDown: onPropsKeyDown,
     onChange: propsOnChange,
+    ...rest
   } = props;
 
   const onChange = useCallback(
@@ -53,9 +54,12 @@ export function Input(props: InputProps) {
   );
 
   return (
-    <ArcoInput
-      {...{ ...props, quickchange: undefined }}
-      onChange={(value) => onChange(value)}
+    <MuiInput
+      size="small"
+      fullWidth
+      {...rest}
+      value={value}
+      onChange={(ev) => onChange(ev.target.value)}
       onKeyDown={onKeyDown}
     />
   );

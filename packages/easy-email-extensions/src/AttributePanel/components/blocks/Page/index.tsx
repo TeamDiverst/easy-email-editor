@@ -7,7 +7,7 @@ import {
   TextField,
 } from '@extensions/components/Form';
 import { AddFont } from '@extensions/components/Form/AddFont';
-import { Collapse, Grid, Space } from '@arco-design/web-react';
+import { Collapse, Grid, Space } from '@extensions/components/MuiAdapter';
 import { Stack, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { FontFamily } from '../../attributes/FontFamily';

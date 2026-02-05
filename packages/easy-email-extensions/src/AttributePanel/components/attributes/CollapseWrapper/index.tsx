@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Collapse, Space } from '@arco-design/web-react';
+import { Collapse, Space } from '@extensions/components/MuiAdapter';
 import { useBlock, useEditorProps } from '@teamdiverst/easy-email-editor';
 import { isAdvancedBlock } from '@teamdiverst/easy-email-core';
 import { Iteration } from '../Iteration';

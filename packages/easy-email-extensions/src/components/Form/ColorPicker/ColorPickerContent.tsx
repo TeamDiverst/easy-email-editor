@@ -1,4 +1,4 @@
-import { Button, Space } from '@arco-design/web-react';
+import { Button, Space } from '@extensions/components/MuiAdapter';
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 
 import styles from '../index.module.scss';

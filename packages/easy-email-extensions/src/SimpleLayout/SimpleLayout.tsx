@@ -1,15 +1,14 @@
 import { ShortcutToolbar } from '../ShortcutToolbar';
-import { Button, Card, ConfigProvider, Layout, Tabs } from '@arco-design/web-react';
+import { Box, Button, Card, ConfigProvider, Layout, Tabs } from '@extensions/components/MuiAdapter';
 import { useEditorProps } from '@teamdiverst/easy-email-editor';
 import React, { useState } from 'react';
 import { SourceCodePanel } from '../SourceCodePanel';
 import { AttributePanel } from '../AttributePanel';
-import { BlockLayer, BlockLayerProps } from '../BlockLayer';
 import { InteractivePrompt } from '../InteractivePrompt';
 import styles from './index.module.scss';
-import enUS from '@arco-design/web-react/es/locale/en-US';
 import { MergeTagBadgePrompt } from '@extensions/MergeTagBadgePrompt';
-import { IconLeft, IconRight } from '@arco-design/web-react/icon';
+import { Typography } from '@mui/material';
+import { ArrowLeft, ArrowRight } from '@mui/icons-material';
 
 export const SimpleLayout: React.FC<
   {
@@ -18,94 +17,98 @@ export const SimpleLayout: React.FC<
     mjmlReadOnly?: boolean;
     defaultShowLayer?: boolean;
     children: React.ReactNode | React.ReactElement;
-  } & BlockLayerProps
+  }
 > = props => {
   const { height: containerHeight } = useEditorProps();
   const { showSourceCode = true, defaultShowLayer = true, jsonReadOnly = false, mjmlReadOnly = true } = props;
   const [collapsed, setCollapsed] = useState(!defaultShowLayer);
   return (
-    <ConfigProvider locale={enUS}>
-      <Layout
+    <ConfigProvider>
+      <Box
         className={styles.SimpleLayout}
-        style={{
+        sx={{
           display: 'flex',
           width: '100%',
           overflow: 'hidden',
           minWidth: 1400,
         }}
       >
-        <Layout.Sider
-          style={{ paddingRight: 0 }}
-          collapsed={collapsed}
-          collapsible
-          trigger={null}
-          breakpoint='xl'
-          collapsedWidth={60}
-          width={300}
+        <Box
+          sx={{
+            paddingRight: 0,
+            width: collapsed ? 60 : 300,
+            flexShrink: 0,
+            borderRight: 1,
+            borderColor: 'divider',
+          }}
         >
           <Card
-            bodyStyle={{ padding: 0 }}
-            style={{ border: 'none' }}
+            sx={{ border: 'none', height: '100%' }}
           >
-            <Card.Grid style={{ width: 60, textAlign: 'center' }}>
-              <ShortcutToolbar />
-              <Button
-                style={{
-                  marginTop: 30,
-                  marginLeft: 'auto',
-                  marginRight: 'auto',
-                }}
-                icon={collapsed ? <IconRight /> : <IconLeft />}
-                shape='round'
-                onClick={() => setCollapsed(v => !v)}
-              />
-            </Card.Grid>
-            <Card.Grid
-              className={styles.customScrollBar}
-              style={{
-                flex: 1,
-                paddingBottom: 50,
-                border: 'none',
-                height: containerHeight,
-                overflowY: 'auto',
-                overflowX: 'hidden',
-              }}
-            >
-              <Card
-                title={t('Layout')}
-                style={{ border: 'none' }}
-                headerStyle={{ height: 50 }}
-              >
-                {!collapsed && <BlockLayer renderTitle={props.renderTitle} />}
-              </Card>
-            </Card.Grid>
+            <Box sx={{ display: 'flex', height: '100%' }}>
+              <Box sx={{ width: 60, textAlign: 'center', borderRight: 1, borderColor: 'divider' }}>
+                <ShortcutToolbar />
+                <Button
+                  sx={{
+                    marginTop: '30px',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                  }}
+                  onClick={() => setCollapsed(v => !v)}
+                >
+                  {collapsed ? <ArrowRight /> : <ArrowLeft />}
+                </Button>
+              </Box>
+              {!collapsed && (
+                <Box
+                  className={styles.customScrollBar}
+                  sx={{
+                    flex: 1,
+                    paddingBottom: '50px',
+                    height: containerHeight,
+                    overflowY: 'auto',
+                    overflowX: 'hidden',
+                  }}
+                >
+                  <Card
+                    sx={{ border: 'none' }}
+                  >
+                    <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider' }}>
+                      <Typography>{t('Layout')}</Typography>
+                    </Box>
+                  </Card>
+                </Box>
+              )}
+            </Box>
           </Card>
-        </Layout.Sider>
+        </Box>
 
-        <Layout style={{ height: containerHeight }}>{props.children}</Layout>
+        <Box sx={{ flexGrow: 1, height: containerHeight, overflow: 'hidden' }}>{props.children}</Box>
 
-        <Layout.Sider
-          style={{
+        <Box
+          sx={{
             height: containerHeight,
             minWidth: 300,
             maxWidth: 350,
             width: 350,
+            borderLeft: 1,
+            borderColor: 'divider',
           }}
           className={styles.rightSide}
         >
           <Card
-            size='small'
             id='rightSide'
-            style={{
+            sx={{
               maxHeight: '100%',
               height: '100%',
               borderLeft: 'none',
+              overflowY: 'auto',
             }}
-            bodyStyle={{ padding: 0 }}
             className={styles.customScrollBarV2}
           >
             <Tabs className={styles.layoutTabs}>
               <Tabs.TabPane
+                key="config"
                 title={(
                   <div style={{ height: 31, lineHeight: '31px' }}>
                     {t('Configuration')}
@@ -116,7 +119,6 @@ export const SimpleLayout: React.FC<
               </Tabs.TabPane>
               {showSourceCode && (
                 <Tabs.TabPane
-                  destroyOnHide
                   key='Source code'
                   title={(
                     <div style={{ height: 31, lineHeight: '31px' }}>
@@ -129,11 +131,11 @@ export const SimpleLayout: React.FC<
               )}
             </Tabs>
           </Card>
-        </Layout.Sider>
+        </Box>
 
         <InteractivePrompt />
         <MergeTagBadgePrompt />
-      </Layout>
+      </Box>
     </ConfigProvider>
   );
 };

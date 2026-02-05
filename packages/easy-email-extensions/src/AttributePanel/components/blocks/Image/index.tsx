@@ -12,7 +12,7 @@ import { Link } from '@extensions/AttributePanel/components/attributes/Link';
 import { Align } from '@extensions/AttributePanel/components/attributes/Align';
 
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
-import { Collapse, Grid, Space } from '@arco-design/web-react';
+import { Collapse, Grid, Space } from '@extensions/components/MuiAdapter';
 import { Border } from '@extensions/AttributePanel/components/attributes/Border';
 import { Stack, useEditorProps, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';

@@ -1,8 +1,8 @@
 import { FieldArray } from 'react-final-form-arrays';
 import React from 'react';
-import { IconDelete, IconPlus } from '@arco-design/web-react/icon';
+import { IconDelete, IconPlus } from '@extensions/components/MuiAdapterIcons';
 import { TextField } from '.';
-import { Button } from '@arco-design/web-react';
+import { Button } from '@extensions/components/MuiAdapter';
 import { Stack, TextStyle, useBlock, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { Help } from '@extensions/AttributePanel/components/UI/Help';
 import { IPage } from '@teamdiverst/easy-email-core';

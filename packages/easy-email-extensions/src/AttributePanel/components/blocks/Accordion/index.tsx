@@ -11,7 +11,7 @@ import {
   SelectField,
   TextField,
 } from '@extensions/components/Form';
-import { Collapse, Grid, Space } from '@arco-design/web-react';
+import { Collapse, Grid, Space } from '@extensions/components/MuiAdapter';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';
 

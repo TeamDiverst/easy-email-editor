@@ -1,17 +1,5 @@
-import {
-  InputNumber,
-  Input as ArcoInput,
-  Switch,
-  Slider,
-  SliderProps,
-  InputNumberProps,
-  SwitchProps,
-  TextAreaProps,
-  CheckboxGroupProps,
-  TreeSelect,
-  TreeSelectProps,
-} from '@arco-design/web-react';
-import { ImageUploaderProps, ImageUploader } from './ImageUploader';
+import { Slider as MuiSlider, Switch as MuiSwitch } from '@mui/material';
+import { ImageUploader, ImageUploaderProps } from './ImageUploader';
 import { UploadField as Uploader, UploadFieldProps } from './UploadField';
 import { Select, SelectProps } from './Select';
 import { RadioGroup, RadioGroupProps } from './RadioGroup';
@@ -22,9 +10,9 @@ import { CheckBoxGroup } from './CheckBoxGroup';
 import { EditTab, EditTabProps } from './EditTab';
 import { EditGridTab, EditGridTabProps } from './EditGridTab';
 import { InlineText, InlineTextProps } from './InlineTextField';
-import { AutoCompleteProps, AutoComplete } from './AutoComplete';
-import { InputSearchProps } from '@arco-design/web-react/es/Input';
+import { AutoComplete, AutoCompleteProps } from './AutoComplete';
 import { ColorPickerField } from './ColorPickerField';
+import React from 'react';
 
 export { RichTextField } from './RichTextField';
 
@@ -35,13 +23,22 @@ export const InputWithUnitField = enhancer<InputWithUnitProps>(
   value => value,
 );
 
-export const SearchField = enhancer<InputSearchProps>(ArcoInput.Search, val => val);
+export const SearchField = enhancer<any>(Input, val => val);
 
-export const TextAreaField = enhancer<TextAreaProps>(ArcoInput.TextArea, val => val);
+export const TextAreaField = enhancer<any>(
+  (props) => <Input {...props} multiline rows={4} />,
+  val => val
+);
 
-export const NumberField = enhancer<InputNumberProps>(InputNumber, e => e);
+export const NumberField = enhancer<any>(
+  (props) => <Input {...props} type="number" />,
+  e => e
+);
 
-export const SliderField = enhancer<SliderProps>(Slider, e => e);
+export const SliderField = enhancer<any>(
+  (props) => <MuiSlider size="small" {...props} />,
+  e => e
+);
 
 export const UploadField = enhancer<UploadFieldProps>(Uploader, val => val);
 
@@ -49,15 +46,25 @@ export const ImageUploaderField = enhancer<ImageUploaderProps>(ImageUploader, ur
 
 export const SelectField = enhancer<SelectProps>(Select, e => e);
 
-export const TreeSelectField = enhancer<TreeSelectProps>(TreeSelect, e => e);
+export const TreeSelectField = enhancer<any>(Select, e => e);
 
 export const AutoCompleteField = enhancer<AutoCompleteProps>(AutoComplete, e => e);
 
 export const RadioGroupField = enhancer<RadioGroupProps>(RadioGroup, value => value);
 
-export const SwitchField = enhancer<SwitchProps>(Switch, e => e);
+export const SwitchField = enhancer<any>(
+  (props) => (
+    <MuiSwitch
+      size="small"
+      {...props}
+      checked={props.value}
+      onChange={(e) => props.onChange(e.target.checked)}
+    />
+  ),
+  e => e
+);
 
-export const CheckboxField = enhancer<CheckboxGroupProps<any>>(CheckBoxGroup, e => e);
+export const CheckboxField = enhancer<any>(CheckBoxGroup, e => e);
 
 export const EditTabField = enhancer<EditTabProps>(EditTab, (e: any[]) => e);
 export const EditGridTabField = enhancer<EditGridTabProps>(EditGridTab, (e: any[]) => e);

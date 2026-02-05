@@ -1,4 +1,4 @@
-import { Tooltip } from '@arco-design/web-react';
+import { Tooltip } from '@extensions/components/MuiAdapter';
 import { classnames } from '@extensions/utils/classnames';
 import React from 'react';
 import { getIframeDocument } from '@teamdiverst/easy-email-editor';

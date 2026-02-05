@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IconFont, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { TextAreaField } from '@extensions/components/Form';
 import { AttributesPanelWrapper } from '../../attributes';
-import { Button, Tooltip } from '@arco-design/web-react';
+import { Button, Tooltip } from '@extensions/components/MuiAdapter';
 import { HtmlEditor } from '../../UI/HtmlEditor';
 
 export function Raw() {

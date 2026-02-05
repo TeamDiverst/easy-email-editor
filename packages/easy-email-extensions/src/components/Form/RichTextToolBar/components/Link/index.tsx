@@ -1,4 +1,4 @@
-import { Grid, PopoverProps, Space, Tooltip } from '@arco-design/web-react';
+import { Grid, PopoverProps, Space, Tooltip } from '@extensions/components/MuiAdapter';
 import React, { useCallback, useMemo } from 'react';
 import { Form } from 'react-final-form';
 import { getIframeDocument, IconFont, Stack, TextStyle } from '@teamdiverst/easy-email-editor';

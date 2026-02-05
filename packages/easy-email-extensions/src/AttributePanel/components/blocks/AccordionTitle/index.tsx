@@ -9,7 +9,7 @@ import { FontWeight } from '../../attributes/FontWeight';
 import { FontFamily } from '../../attributes/FontFamily';
 import { AttributesPanelWrapper } from '../../attributes/AttributesPanelWrapper';
 import { useFocusIdx } from '@teamdiverst/easy-email-editor';
-import { Collapse, Grid, Space } from '@arco-design/web-react';
+import { Collapse, Grid, Space } from '@extensions/components/MuiAdapter';
 
 export function AccordionTitle() {
   const { focusIdx } = useFocusIdx();

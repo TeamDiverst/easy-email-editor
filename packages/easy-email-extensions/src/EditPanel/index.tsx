@@ -1,14 +1,11 @@
-import { Layout, Tabs } from '@arco-design/web-react';
+import { Box, Tabs } from '@extensions/components/MuiAdapter';
 import { useEditorProps } from '@teamdiverst/easy-email-editor';
 import React from 'react';
 import { Blocks } from './Blocks';
-import { BlockLayer } from '@extensions/BlockLayer';
 import { FullHeightOverlayScrollbars } from '@extensions/components/FullHeightOverlayScrollbars';
 import styles from './index.module.scss';
 import { ConfigurationDrawer } from './ConfigurationDrawer';
 import { useExtensionProps } from '@extensions/components/Providers/ExtensionProvider';
-
-const TabPane = Tabs.TabPane;
 
 export function EditPanel({
   showSourceCode,
@@ -23,45 +20,32 @@ export function EditPanel({
   const { compact = true, showBlockLayer = true } = useExtensionProps();
 
   return (
-    <Layout.Sider
+    <Box
       className={styles.blocksPanel}
-      style={{ paddingRight: 0, minWidth: 360 }}
-      // collapsed={collapsed}
-      collapsible
-      trigger={null}
-      breakpoint='xl'
-      collapsedWidth={60}
-      width={360}
+      sx={{ paddingRight: 0, minWidth: 360, width: 360, borderRight: 1, borderColor: 'divider' }}
     >
       <Tabs
         defaultActiveTab='2'
         style={{ width: '100%', padding: 0 }}
-        renderTabTitle={(DefaultHeader, _) => (
-          <div className={styles.largeTabsHeader}>
-            {DefaultHeader}
-          </div>
-        )}
       >
-        <TabPane
+        <Tabs.TabPane
           key='2'
           title={t('Block')}
         >
           <FullHeightOverlayScrollbars height={`calc(${height} - 60px)`}>
             <Blocks />
           </FullHeightOverlayScrollbars>
-        </TabPane>
+        </Tabs.TabPane>
 
         {showBlockLayer && (
-          <TabPane
+          <Tabs.TabPane
             key='1'
             title={t('Layer')}
           >
             <FullHeightOverlayScrollbars height={`calc(${height} - 60px)`}>
-              <div style={{ padding: 20 }}>
-                <BlockLayer />
-              </div>
+              <div style={{ padding: 20 }} />
             </FullHeightOverlayScrollbars>
-          </TabPane>
+          </Tabs.TabPane>
         )}
       </Tabs>
       {!compact && (
@@ -73,6 +57,6 @@ export function EditPanel({
           mjmlReadOnly={mjmlReadOnly}
         />
       )}
-    </Layout.Sider>
+    </Box>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { AutoComplete as ArcoAutoComplete, AutoCompleteProps as ArcoAutoCompleteProps } from '@arco-design/web-react';
+import { AutoComplete as ArcoAutoComplete, AutoCompleteProps as ArcoAutoCompleteProps } from '@extensions/components/MuiAdapter';
 import { isString } from 'lodash';
 
 export interface AutoCompleteProps

@@ -1,10 +1,10 @@
 import { useBlock, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { AdvancedBlock, OperatorSymbol, AdvancedType, Operator, ICondition, IConditionGroup } from '@teamdiverst/easy-email-core';
-import { Collapse, Grid, Switch, Button, Space, List, Message } from '@arco-design/web-react';
+import { Collapse, Grid, Switch, Button, Space, List, Message } from '@extensions/components/MuiAdapter';
 import { SelectField, TextField } from '@extensions/components/Form';
 import React, { useCallback } from 'react';
 import { cloneDeep, get, upperFirst } from 'lodash';
-import { IconDelete, IconPlus } from '@arco-design/web-react/icon';
+import { IconDelete, IconPlus } from '@extensions/components/MuiAdapterIcons';
 import { useField } from 'react-final-form';
 
 export function Condition() {

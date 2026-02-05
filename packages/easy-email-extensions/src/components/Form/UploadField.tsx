@@ -1,7 +1,6 @@
 import { Uploader } from '@extensions/AttributePanel/utils/Uploader';
-import { Input } from '@arco-design/web-react';
+import { Input } from '@extensions/components/MuiAdapter';
 import React, { useEffect, useRef, useState } from 'react';
-import { IconUpload, IconLoading } from '@arco-design/web-react/icon';
 
 export interface UploadFieldProps {
   onChange: (val: string) => void;
@@ -42,7 +41,7 @@ export function UploadField(props: UploadFieldProps) {
 
   return (
     <Input
-      prefix={loading ? <IconLoading /> : <IconUpload onClick={onClick} />}
+      // prefix={loading ? < /> : <Refresh onClick={onClick} />}
       value={props.value}
       onChange={inputDisabled ? undefined : (value) => onChange(value)}
     />

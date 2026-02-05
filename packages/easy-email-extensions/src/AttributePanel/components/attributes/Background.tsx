@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { ImageUploaderField, SelectField, TextField } from '../../../components/Form';
 import { useFocusIdx, useEditorProps } from '@teamdiverst/easy-email-editor';
 import { BackgroundColor } from './BackgroundColor';
-import { Grid, Space } from '@arco-design/web-react';
+import { Grid, Space } from '@extensions/components/MuiAdapter';
 
 const backgroundRepeatOptions = [
   {

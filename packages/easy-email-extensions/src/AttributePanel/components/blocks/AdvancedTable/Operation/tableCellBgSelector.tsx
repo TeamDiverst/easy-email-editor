@@ -1,4 +1,4 @@
-import { Input } from '@arco-design/web-react';
+import { Input } from '@extensions/components/MuiAdapter';
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 

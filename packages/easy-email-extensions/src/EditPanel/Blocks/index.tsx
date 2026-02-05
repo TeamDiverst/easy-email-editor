@@ -1,8 +1,8 @@
-import { Collapse, Grid, Space, Typography } from '@arco-design/web-react';
+import { Collapse, Grid, Space, Typography } from '@extensions/components/MuiAdapter';
 import { AdvancedType, BlockManager, IBlockData } from '@teamdiverst/easy-email-core';
 import { BlockAvatarWrapper, IconFont } from '@teamdiverst/easy-email-editor';
 import React, { useMemo, useState } from 'react';
-import { IconCaretRight, IconCaretUp } from '@arco-design/web-react/icon';
+import { IconCaretRight, IconCaretUp } from '@extensions/components/MuiAdapterIcons';
 import { getIconNameByBlockType } from '@extensions/utils/getIconNameByBlockType';
 import styles from './index.module.scss';
 import { useExtensionProps } from '@extensions/components/Providers/ExtensionProvider';

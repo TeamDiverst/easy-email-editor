@@ -1,4 +1,4 @@
-import { Card, Tabs } from '@arco-design/web-react';
+import { Card, Tabs } from '@extensions/components/MuiAdapter';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import styles from './index.module.scss';
 import { createPortal } from 'react-dom';
@@ -85,7 +85,6 @@ export const BlocksPanel: React.FC<{
                 >
                   <Tabs
                     tabPosition='left'
-                    size='large'
                   >
                     {filterCategories.map((category, index) => (
                       <Tabs.TabPane

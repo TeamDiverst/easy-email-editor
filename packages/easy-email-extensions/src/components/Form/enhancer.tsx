@@ -1,8 +1,8 @@
 import { Field, UseFieldConfig } from 'react-final-form';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRefState } from '@teamdiverst/easy-email-editor';
+import { Box, FormControl, FormHelperText, FormLabel } from '@extensions/components/MuiAdapter';
 import { debounce } from 'lodash';
-import { Form, FormItemProps } from '@arco-design/web-react';
 
 export interface EnhancerProps {
   name: string;
@@ -10,8 +10,8 @@ export interface EnhancerProps {
   validate?: (value: any) => string | undefined | Promise<string | undefined>;
   config?: UseFieldConfig<any, any>;
   changeOnBlur?: boolean;
-  formItem?: FormItemProps;
-  label?: FormItemProps['label'];
+  formItem?: any;
+  label?: React.ReactNode;
   inline?: boolean;
   equalSpacing?: boolean;
   required?: boolean;
@@ -59,55 +59,6 @@ export default function enhancer<P extends { onChange?: (...rest: any) => any }>
     const [currentValue, setCurrentValue] = useState('');
     const currentValueRef = useRefState(currentValue);
 
-    const layoutStyle = useMemo((): FormItemProps => {
-      if (equalSpacing) {
-        return {
-          labelCol: {
-            span: 11,
-            style: {
-              textAlign: 'left',
-              paddingRight: 0,
-            },
-          },
-          wrapperCol: {
-            span: 11,
-            offset: 1,
-            style: {
-              textAlign: 'right',
-            },
-          },
-        };
-      }
-      if (inline) {
-        return {
-          labelCol: {
-            span: 7,
-            style: {
-              textAlign: 'right',
-              paddingRight: 0,
-            },
-          },
-          wrapperCol: {
-            span: 16,
-            offset: 1,
-            style: {},
-          },
-        };
-      }
-
-      return {
-        labelCol: {
-          span: 24,
-          style: {
-            paddingRight: 0,
-          },
-        },
-        wrapperCol: {
-          span: 24,
-        },
-      };
-    }, [equalSpacing, inline]);
-
     return useMemo(() => {
       return (
         <Field
@@ -142,7 +93,7 @@ export default function enhancer<P extends { onChange?: (...rest: any) => any }>
                   debounceCallbackChange(newVal);
                 }
               },
-              [debounceCallbackChange],
+              [debounceCallbackChange, onChangeAdapter],
             );
 
             const onFieldBlur = useCallback(() => {
@@ -150,36 +101,50 @@ export default function enhancer<P extends { onChange?: (...rest: any) => any }>
                 onChange(currentValueRef.current);
                 onBlur();
               }
-            }, [onBlur, onChange]);
+            }, [onBlur, onChange, changeOnBlur, currentValueRef]);
 
             useEffect(() => {
               setCurrentValue(value);
             }, [value]);
 
+            const error = meta.touched && meta.error;
+
             return (
-              <Form.Item
+              <FormControl
+                error={!!error}
+                fullWidth
                 style={{
                   ...style,
-                  margin: '0px',
+                  marginBottom: '10px',
                 }}
-                rules={required ? [{ required: true }] : undefined}
-                {...layoutStyle}
-                {...formItem}
-                label={labelHidden ? undefined : label || formItem?.label}
-                labelAlign='left'
-                validateStatus={meta.touched && meta.error ? 'error' : undefined}
-                help={meta.touched && meta.error ? meta.error : helpText}
+                required={required}
               >
-                <Component
-                  autoComplete={autoComplete}
-                  {...rest}
-                  name={name}
-                  checked={currentValue}
-                  value={currentValue}
-                  onChange={onFieldChange}
-                  onBlur={onFieldBlur}
-                />
-              </Form.Item>
+                {!labelHidden && (label || formItem?.label) && (
+                  <FormLabel
+                    sx={{
+                      fontSize: '14px',
+                      marginBottom: '4px',
+                      color: 'text.secondary',
+                    }}
+                  >
+                    {label || formItem?.label}
+                  </FormLabel>
+                )}
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Component
+                    autoComplete={autoComplete}
+                    {...rest}
+                    name={name}
+                    checked={currentValue}
+                    value={currentValue}
+                    onChange={onFieldChange}
+                    onBlur={onFieldBlur}
+                  />
+                </Box>
+                {(error || helpText) && (
+                  <FormHelperText>{error || helpText}</FormHelperText>
+                )}
+              </FormControl>
             );
           }}
         </Field>
@@ -195,7 +160,6 @@ export default function enhancer<P extends { onChange?: (...rest: any) => any }>
       helpText,
       label,
       labelHidden,
-      layoutStyle,
       name,
       onChangeAdapter,
       required,

@@ -2,7 +2,7 @@ import React from 'react';
 import { Width } from '@extensions/AttributePanel/components/attributes/Width';
 import { BackgroundColor } from '@extensions/AttributePanel/components/attributes/BackgroundColor';
 import { VerticalAlign } from '@extensions/AttributePanel/components/attributes/VerticalAlign';
-import { Collapse, Grid } from '@arco-design/web-react';
+import { Collapse, Grid } from '@extensions/components/MuiAdapter';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';

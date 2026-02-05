@@ -1,4 +1,4 @@
-import { Input, Popover, PopoverProps } from '@arco-design/web-react';
+import { Input, Popover, PopoverProps } from '@extensions/components/MuiAdapter';
 import React, { useCallback, useContext, useMemo, useState } from 'react';
 
 import { getImg } from '@extensions/AttributePanel/utils/getImg';

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-wrap-multilines */
-import { Input, Popover, PopoverProps } from '@arco-design/web-react';
+import { Input, Popover, PopoverProps } from '@extensions/components/MuiAdapter';
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { ColorResult, SketchPicker } from 'react-color';
 import { PresetColorsContext } from '../../AttributePanel/components/provider/PresetColorsProvider';

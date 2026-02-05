@@ -1,9 +1,9 @@
-import { Card, ConfigProvider, Layout } from '@arco-design/web-react';
+import { Card, ConfigProvider, Layout } from '@extensions/components/MuiAdapter';
 import { useEditorProps, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import React, { useEffect } from 'react';
 import { InteractivePrompt } from '../InteractivePrompt';
 import styles from './index.module.scss';
-import enUS from '@arco-design/web-react/es/locale/en-US';
+import enUS from '@mui/material/es/locale/en-US';
 import { MergeTagBadgePrompt } from '@extensions/MergeTagBadgePrompt';
 import { EditPanel } from '../EditPanel';
 import { ConfigurationPanel } from '@extensions/ConfigurationPanel';
@@ -109,21 +109,21 @@ export const StandardLayout: React.FC<ExtensionProps> = props => {
       {...props}
       categories={categories}
     >
-      <ConfigProvider locale={enUS}>
+      <ConfigProvider>
         <Card
-          style={{ padding: 0 }}
-          bodyStyle={{
+          sx={{
             padding: 0,
             height: containerHeight,
             overflow: 'hidden',
           }}
         >
-          <Layout
+          <Box
             className={styles.StandardLayout}
-            style={{
+            sx={{
               display: 'flex',
               width: '100%',
               overflow: 'hidden',
+              height: '100%',
             }}
           >
             {compact && (
@@ -133,7 +133,7 @@ export const StandardLayout: React.FC<ExtensionProps> = props => {
                 mjmlReadOnly={mjmlReadOnly}
               />
             )}
-            <Layout style={{ height: containerHeight, flex: 1 }}>{props.children}</Layout>
+            <Box sx={{ height: containerHeight, flex: 1, overflow: 'hidden' }}>{props.children}</Box>
             {!compact && (
               <EditPanel
                 showSourceCode={showSourceCode}
@@ -142,12 +142,14 @@ export const StandardLayout: React.FC<ExtensionProps> = props => {
               />
             )}
             {compact ? (
-              <Layout.Sider
-                style={{
+              <Box
+                sx={{
                   height: containerHeight,
                   minWidth: 300,
                   maxWidth: 350,
                   width: 350,
+                  borderLeft: 1,
+                  borderColor: 'divider',
                 }}
               >
                 <ConfigurationPanel
@@ -157,11 +159,11 @@ export const StandardLayout: React.FC<ExtensionProps> = props => {
                   jsonReadOnly={jsonReadOnly}
                   mjmlReadOnly={mjmlReadOnly}
                 />
-              </Layout.Sider>
+              </Box>
             ) : (
-              <Layout.Sider style={{ width: 0, overflow: 'hidden' }} />
+              <Box sx={{ width: 0, overflow: 'hidden' }} />
             )}
-          </Layout>
+          </Box>
         </Card>
         <InteractivePrompt />
         <MergeTagBadgePrompt />

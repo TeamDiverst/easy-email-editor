@@ -10,7 +10,7 @@ import { FontWeight } from '../../attributes/FontWeight';
 import { FontFamily } from '../../attributes/FontFamily';
 import { LineHeight } from '../../attributes/LineHeight';
 import { AttributesPanelWrapper } from '../../attributes/AttributesPanelWrapper';
-import { Collapse, Grid, Space } from '@arco-design/web-react';
+import { Collapse, Grid, Space } from '@extensions/components/MuiAdapter';
 
 export function AccordionText() {
   const { focusIdx } = useFocusIdx();

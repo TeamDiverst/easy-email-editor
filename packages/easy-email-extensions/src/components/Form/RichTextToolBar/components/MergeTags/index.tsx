@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 
 import { MergeTags as MergeTagsOptions } from '@extensions/AttributePanel';
-import { Popover } from '@arco-design/web-react';
+import { Popover } from '@extensions/components/MuiAdapter';
 import { ToolItem } from '../ToolItem';
 import { getIframeDocument, IconFont } from '@teamdiverst/easy-email-editor';
 

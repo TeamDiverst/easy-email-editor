@@ -8,8 +8,8 @@ import {
   SelectField,
   TextField,
 } from '@extensions/components/Form';
-import { IconLink } from '@arco-design/web-react/icon';
-import { Collapse, Grid, Space } from '@arco-design/web-react';
+import { IconLink } from '@extensions/components/MuiAdapterIcons';
+import { Collapse, Grid, Space } from '@extensions/components/MuiAdapter';
 import { Stack, useEditorProps, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { Align } from '@extensions/AttributePanel/components/attributes/Align';

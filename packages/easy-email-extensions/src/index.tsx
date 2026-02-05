@@ -1,6 +1,5 @@
 import './index.scss';
 
-export * from './BlockLayer';
 export * from './AttributePanel';
 export * from './ShortcutToolbar';
 export * from './SourceCodePanel';

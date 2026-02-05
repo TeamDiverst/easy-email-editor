@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Tabs } from '@arco-design/web-react';
+import { Tabs } from '@extensions/components/MuiAdapter';
 import { AttributePanel } from '@extensions/AttributePanel';
 import { SourceCodePanel } from '@extensions/SourceCodePanel';
 import { FullHeightOverlayScrollbars } from '@extensions/components/FullHeightOverlayScrollbars';
-import { IconLeft } from '@arco-design/web-react/icon';
-import styles from './index.module.scss';
+import { IconLeft } from '@extensions/components/MuiAdapterIcons';
 
 export interface ConfigurationPanelProps {
   showSourceCode: boolean;
@@ -24,9 +23,9 @@ export function ConfigurationPanel({
   mjmlReadOnly,
 }: ConfigurationPanelProps) {
   const [inited, setInited] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
-    // Tabs 在 drawer 里面有bug
     let timer = setTimeout(() => {
       setInited(true);
     }, 100);
@@ -37,58 +36,38 @@ export function ConfigurationPanel({
 
   if (!inited) return null;
 
+  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+    setActiveTab(newValue);
+  };
+
   return (
     <>
       {showSourceCode ? (
-        <Tabs
-          className={styles.tabs}
-          renderTabHeader={(_, DefaultHeader) =>
-            !compact ? (
-              <div
-                className={styles.largeTabsHeader}
-                style={{ display: 'flex', alignItems: 'center' }}
-              >
-                <div
-                  style={{ padding: 10, cursor: 'pointer' }}
-                  onClick={onBack}
-                >
-                  <IconLeft fontSize={16} />
-                </div>
-
-                <DefaultHeader style={{ flex: 1 }} />
-              </div>
-            ) : (
-              <div
-                className={styles.largeTabsHeader}
-                style={{ display: 'flex', alignItems: 'center' }}
-              >
-                <DefaultHeader style={{ flex: 1 }} />
-              </div>
-            )
-          }
-        >
-          <Tabs.TabPane
-            title={
-              <div style={{ height: 40, lineHeight: '40px' }}>{t('Configuration')}</div>
-            }
-          >
-            <FullHeightOverlayScrollbars height={`calc(${height} - 60px)`}>
-              <AttributePanel />
-            </FullHeightOverlayScrollbars>
-          </Tabs.TabPane>
-
-          <Tabs.TabPane
-            destroyOnHide
-            key='Source code'
-            title={
-              <div style={{ height: 40, lineHeight: '40px' }}>{t('Source code')}</div>
-            }
-          >
-            <FullHeightOverlayScrollbars height={`calc(${height} - 60px)`}>
-              <SourceCodePanel jsonReadOnly={jsonReadOnly} mjmlReadOnly={mjmlReadOnly} />
-            </FullHeightOverlayScrollbars>
-          </Tabs.TabPane>
-        </Tabs>
+        <Box sx={{ width: '100%', height: height, display: 'flex', flexDirection: 'column' }}>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider', display: 'flex', alignItems: 'center' }}>
+            {!compact && onBack && (
+              <IconButton onClick={onBack} size="small" sx={{ ml: 1 }}>
+                <IconLeft fontSize="small" />
+              </IconButton>
+            )}
+            <Tabs value={activeTab} onChange={handleTabChange} sx={{ flex: 1 }}>
+              <Tab label={t('Configuration')} />
+              <Tab label={t('Source code')} />
+            </Tabs>
+          </Box>
+          <Box sx={{ flex: 1, overflow: 'hidden' }}>
+            {activeTab === 0 && (
+              <FullHeightOverlayScrollbars height={`calc(${height} - 48px)`}>
+                <AttributePanel />
+              </FullHeightOverlayScrollbars>
+            )}
+            {activeTab === 1 && (
+              <FullHeightOverlayScrollbars height={`calc(${height} - 48px)`}>
+                <SourceCodePanel jsonReadOnly={jsonReadOnly} mjmlReadOnly={mjmlReadOnly} />
+              </FullHeightOverlayScrollbars>
+            )}
+          </Box>
+        </Box>
       ) : (
         <AttributePanel />
       )}

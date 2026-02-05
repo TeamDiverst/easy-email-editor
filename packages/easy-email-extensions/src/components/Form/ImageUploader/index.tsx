@@ -1,22 +1,10 @@
-import React, { useState, useCallback, useRef, useMemo } from 'react';
-import {
-  Dropdown,
-  Grid,
-  Input,
-  Menu,
-  Message,
-  Modal,
-  Popover,
-  Spin,
-  Button as ArcoButton,
-} from '@arco-design/web-react';
-import { IconPlus, IconEye, IconDelete, IconAt } from '@arco-design/web-react/icon';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import styles from './index.module.scss';
 import { Uploader, UploaderServer } from '@extensions/AttributePanel/utils/Uploader';
 import { classnames } from '@extensions/AttributePanel/utils/classnames';
 import { previewLoadImage } from '@extensions/AttributePanel/utils/previewLoadImage';
-import { MergeTags } from '@extensions';
-import { IconFont, useEditorProps } from '@teamdiverst/easy-email-editor';
+import { useEditorProps } from '@teamdiverst/easy-email-editor';
+import { Refresh } from '@mui/icons-material';
 
 export interface ImageUploaderProps {
   onChange: (val: string) => void;
@@ -100,7 +88,7 @@ export function ImageUploader(props: ImageUploaderProps) {
       return (
         <div className={styles['item']}>
           <div className={classnames(styles['info'])}>
-            <Spin />
+            <Refresh />
             <div className={styles['btn-wrap']} />
           </div>
         </div>
@@ -110,7 +98,7 @@ export function ImageUploader(props: ImageUploaderProps) {
     if (!props.value) {
       return (
         <div className={styles['upload']} onClick={onUpload}>
-          <IconPlus />
+          <Add />
           <div>Upload</div>
         </div>
       );
@@ -122,10 +110,10 @@ export function ImageUploader(props: ImageUploaderProps) {
           <img src={props.value} />
           <div className={styles['btn-wrap']}>
             <a title={t('Preview')} onClick={() => setPreview(true)}>
-              <IconEye />
+              <Visibility />
             </a>
             <a title={t('Remove')} onClick={() => onRemove()}>
-              <IconDelete />
+              <Delete />
             </a>
           </div>
         </div>
@@ -145,48 +133,48 @@ export function ImageUploader(props: ImageUploaderProps) {
           {mergeTags && (
             <Popover
               trigger='click'
-              content={<MergeTags value={props.value} onChange={onChange} />}
+              // content={<MergeTags value={props.value} onChange={onChange} />}
             >
-              <ArcoButton icon={<IconFont iconName='icon-merge-tags' />} />
+              <Button />
             </Popover>
           )}
           <Input
             style={{ flex: 1 }}
             onPaste={onPaste}
             value={props.value}
-            onChange={onChange}
+            // onChange={onChange}
             disabled={isUploading}
 
           />
-          {props.autoCompleteOptions && (
-            <Dropdown
-              position="tr"
-              droplist={(
-                <Menu onClickMenuItem={(indexStr) => {
-                  if (!props.autoCompleteOptions) return;
-                  onChange(props.autoCompleteOptions[+indexStr]?.value);
-                }}
-                >
-                  {
-                    props.autoCompleteOptions.map((item, index) => {
-                      return (
-                        <Menu.Item style={{ display: 'flex', alignItems: 'center' }} key={index.toString()}>
-                          <img src={item.value} style={{ width: 20, height: 20 }} />&emsp;<span>{item.label}</span>
-                        </Menu.Item>
-                      );
-                    })
-                  }
-                </Menu>
-              )}
-            >
-              <ArcoButton icon={<IconAt />} />
-            </Dropdown>
-          )}
+          {/*{props.autoCompleteOptions && (*/}
+          {/*  <Dropdown*/}
+          {/*    position="tr"*/}
+          {/*    droplist={(*/}
+          {/*      <Menu onClickMenuItem={(indexStr) => {*/}
+          {/*        if (!props.autoCompleteOptions) return;*/}
+          {/*        onChange(props.autoCompleteOptions[+indexStr]?.value);*/}
+          {/*      }}*/}
+          {/*      >*/}
+          {/*        {*/}
+          {/*          props.autoCompleteOptions.map((item, index) => {*/}
+          {/*            return (*/}
+          {/*              <Menu.Item style={{ display: 'flex', alignItems: 'center' }} key={index.toString()}>*/}
+          {/*                <img src={item.value} style={{ width: 20, height: 20 }} />&emsp;<span>{item.label}</span>*/}
+          {/*              </Menu.Item>*/}
+          {/*            );*/}
+          {/*          })*/}
+          {/*        }*/}
+          {/*      </Menu>*/}
+          {/*    )}*/}
+          {/*  >*/}
+          {/*    <ArcoButton icon={<IconAt />} />*/}
+          {/*  </Dropdown>*/}
+          {/*)}*/}
         </Grid.Row>
       </div>
-      <Modal visible={preview} footer={null} onCancel={() => setPreview(false)}>
-        <img alt={t('Preview')} style={{ width: '100%' }} src={props.value} />
-      </Modal>
+      {/*<Modal visible={preview} footer={null} onCancel={() => setPreview(false)}>*/}
+      {/*  <img alt={t('Preview')} style={{ width: '100%' }} src={props.value} />*/}
+      {/*</Modal>*/}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { Padding } from '@extensions/AttributePanel/components/attributes//Paddi
 import { Background } from '@extensions/AttributePanel/components/attributes//Background';
 import { TextField } from '@extensions/components/Form';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
-import { Collapse, Grid } from '@arco-design/web-react';
+import { Collapse, Grid } from '@extensions/components/MuiAdapter';
 import { Stack, useFocusIdx } from '@teamdiverst/easy-email-editor';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';
